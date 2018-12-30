@@ -2,28 +2,25 @@ import React, { Component } from "react";
 import "./Nav.css";
 
 class Nav extends Component {
-
-  openNav = () => {
-    this.refs.mySidenav.style.width = "100%";
-  }
-  
-  closeNav = () => {
-    this.refs.mySidenav.style.width = "0";
-  }
   render() {
     return (
-      <nav>
-        <div ref="mySidenav" className="sidenav">
-          <a href="/" className="closebtn" onClick={this.closeNav}>
-            &times;
-          </a>
-          <a href="/">Home</a>
-          <a href="/upload">Upload Contents</a>
-          <a href="/display">Display Preview</a>
+      <nav className="p-3 fixed-top nav-background">
+        <div className="container d-flex justify-content-between text-white font-weight-bold">
+        <div className="d-flex">
+            <div className="pt-3 pr-3 animx-subtitle">content</div>
+            <div className="pt-3 pr-2 animx-subtitle"></div>
+            <div className="pt-3 pl-2 animx-subtitle">view</div>
         </div>
-
-        <span className="nav-icon" onClick={this.openNav}>&#9776;</span>
-
+          
+          <div className="animx-color animx-font mr-5"><strong>animX</strong></div>
+          {/* <div className="header-midtitle">{title}</div> */}
+          <div  className="pt-3 pl-2 animx-subtitle">
+           {/* <div className="pt-2 pr-2 animx-login">Login</div>
+           <div className="pt-2 pr-2 animx-login">|</div>
+           <div className="pt-2 pl-2 animx-login"> Sign Up</div> */}
+            account
+          </div>  
+        </div>
       </nav>
     );
   }

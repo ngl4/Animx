@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
-// import Upload from "./pages/Upload";
-// import Display from "./pages/Display";
+// import Upload from "./pages/Workspace/Upload";
+// import Display from "./pages/Workspace/Display";
 import NoMatch from "./pages/NoMatch";
 
 const App = () => (
