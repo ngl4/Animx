@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./Home.css";
 import HomeNav from "../../components/HomeNav";
+import Footer from "../../components/Footer";
+
 
 class Home extends Component {
   state = {
@@ -25,25 +27,20 @@ class Home extends Component {
                 Welcome to animX!
               </h1>
               <p className="lead heading-lead">
-                This is 3D animating Website Builder
+                This is a 3D animating Website Builder
               </p>
-              <button className="btn btn-light heading-button">Click Here to Start</button>
+              <a className="btn btn-light heading-button" href="/workspace">Click Here to Start</a>
 
             </div>
           </div>
 
-          {/* Content: Clicky boxes */}
+          {/* Content: show sample templates */}
           <div className="container clicky-wrap">
-
 
            </div>
 
-          {/* Footer - force bottom */}
-          <footer className="container-fluid text-white p-3">
-            <div className="container">
-              <p>Copyright 2018 Animx</p>
-            </div>
-          </footer>
+          {/* Footer */}
+          <Footer />
         </div>
       </div>
     );

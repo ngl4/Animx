@@ -1,5 +1,10 @@
 .animx-login {
     color: #D35400;
     font-family: 'Major Mono Display', monospace;
+    
+}
 
+a:hover {
+    color: #D35400;
+    text-decoration: none;
 }
