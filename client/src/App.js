@@ -6,12 +6,14 @@ import Workspace from "./pages/Workspace";
 import Content from "./pages/Workspace/Content";
 import View from "./pages/Workspace/View";
 import NoMatch from "./pages/NoMatch";
+import Template from "./pages/Template";
 
 const App = () => (
   <Router>
     <div>
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/template" component={Template} />
         <Route exact path="/workspace" component={Workspace} />
         <Route exact path="/workspace/content" component={Content} />
         <Route exact path="/workspace/view" component={View} />

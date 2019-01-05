@@ -14,7 +14,7 @@ class Workspace extends Component {
     return (
       <div>
           <Nav />
-          <div class="jumbotron mt-5 text-center">
+          <div className="jumbotron mt-5 text-center">
               This is Workspace!!!
           </div>
 
