@@ -29,7 +29,7 @@ class Home extends Component {
               <p className="lead heading-lead">
                 This is a 3D animating Website Builder
               </p>
-              <a className="btn btn-light heading-button" href="/workspace">Click Here to Start</a>
+              <a className="btn btn-light heading-button" href="/template">Click Here to Start</a>
 
             </div>
           </div>

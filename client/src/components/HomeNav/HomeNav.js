@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./HomeNav.css";
 
+//HomeNav is for the Home Page only
+
 class HomeNav extends Component {
   render() {
     return (
