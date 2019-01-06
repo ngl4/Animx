@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./TemplateNav.css";
 
+// TemplateNav is only for Template Page where you choose Templates
+
 class TemplateNav extends Component {
   render() {
     return (
@@ -9,7 +11,7 @@ class TemplateNav extends Component {
         <div className="d-flex">
             <div className="pt-3 pr-3 animx-subtitle"><a href="/" className="animx-color">back</a></div>
             <div className="pt-3 pr-2 animx-subtitle"></div>
-            <div className="pt-3 pl-2 animx-subtitle"><a href="/workspace/view" className="animx-color"></a></div>
+            <div className="pt-3 pl-2 animx-subtitle"></div>
         </div>
           
           <div className=" animx-font mr-5"><a href="/" className="animx-color">animX</a></div>

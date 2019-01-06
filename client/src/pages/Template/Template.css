@@ -1,3 +1,7 @@
 .card-size {
-    width: 18rem;
+    height: 20rem;
+}
+
+img {
+    height: 16rem;
 }

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import TemplateNav from "../../components/TemplateNav";
+import "./Template.css";
 
 class Template extends Component {
   state = {};
@@ -14,31 +15,33 @@ class Template extends Component {
           <h1> Templates </h1>
           <hr />
 
-          <div className="container row d-flex justify-content-around">
-            <div className="card col-md-3 m-2">
-              <img className="card-img-top" src="./images/templates.png" alt="Card image cap" />
-              <div className="card-body">
-                <p className="card-text">
-                  Template 1
-                </p>
+          <div className="container">
+            <div className="row d-flex justify-content-around">
+              <div className="card card-size col-md-3 m-2">
+                <a href="/template_1/workspace" alt="template_1">
+                  <img
+                    className="card-img-top"
+                    src="./images/templates.png"
+                    alt="Cardcap 1"
+                  />
+                  <div className="card-body">
+                    <p className="card-text">Template 1</p>
+                  </div>
+                </a>
               </div>
-            </div>
 
-            <div className="card card-size col-md-3 m-2">
-              <img className="card-img-top" src="" alt="Card image cap" />
-              <div className="card-body">
-                <p className="card-text">
-                  Template 2
-                </p>
+              <div className="card card-size col-md-3 m-2">
+                <img className="card-img-top" src="" alt="Cardcap 2" />
+                <div className="card-body">
+                  <p className="card-text">Template 2</p>
+                </div>
               </div>
-            </div>
 
-            <div className="card card-size col-md-3 m-2">
-              <img className="card-img-top" src="" alt="Card image cap" />
-              <div className="card-body">
-                <p className="card-text">
-                  Template 3
-                </p>
+              <div className="card card-size col-md-3 m-2">
+                <img className="card-img-top" src="" alt="Cardcap 3" />
+                <div className="card-body">
+                  <p className="card-text">Template 3</p>
+                </div>
               </div>
             </div>
           </div>
