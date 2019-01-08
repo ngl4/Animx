@@ -11,13 +11,7 @@ const Nav = (props) => (
         <div className="d-flex">
             <div className="pt-3 pr-3 animx-subtitle"><a href={props.contentUrl} className="animx-color">content</a></div>
             <div className="pt-3 pr-2 animx-subtitle"></div>
-<<<<<<< HEAD
-            <div className="pt-3 pl-2 animx-subtitle"><a href="/workspace/view" className="animx-color">view</a></div>
-            <div className="pt-3 pr-2 animx-subtitle"></div> <div className="pt-3 pr-2 animx-subtitle"></div>
-            <div className="pt-3 pl-2 animx-subtitle"><a href="/template1" className="animx-color">Template 1</a></div>
-=======
             <div className="pt-3 pl-2 animx-subtitle"><a href={props.viewUrl} className="animx-color">view</a></div>
->>>>>>> master
         </div>
           
           <div className=" animx-font mr-5"><a href="/" className="animx-color">animX</a></div>
