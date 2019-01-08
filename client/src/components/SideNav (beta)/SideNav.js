@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./SideNav.css";
 
+// SideNav is still under production (not ready yet)!
+
 class SideNav extends Component {
 
   openNav = () => {
