@@ -1,0 +1,71 @@
+.numbers {
+    height: 200px;
+    width: 200px;
+    margin-bottom: 3%;
+
+}
+
+.row {
+    background-color: #F3f3f3;
+    text-align: center;
+}
+
+a.projects{ color:gray; } 
+a.projects:visited{ color: gray } 
+a.projects:hover{ -webkit-animation:colorchange 20s infinite alternate;;} 
+a.projects:active{ color:gray;}
+
+@-webkit-keyframes colorchange {
+    0% {
+  
+      color:#F48FB1;
+    }
+  
+    10% {
+  
+      color:  #D2B4DE;
+    }
+  
+    20% {
+  
+      color:#3F51B5;
+    }
+  
+    30% {
+  
+      color:#85C1E9;
+    }
+
+    40% {
+
+        color: #00796B;
+      }
+    
+      50% {
+    
+        color: #82E0AA;
+      }
+    
+      60% {
+    
+        color:#A2D9CE;
+      }
+    
+      70% {
+    
+        color:#FFC107;
+      }
+      80% {
+    
+        color: #EDBB99;
+      }
+    
+      90% {
+    
+        color: #D98880;
+      }
+    
+      100% {
+        color: #F76FC1;
+    }
+  }
