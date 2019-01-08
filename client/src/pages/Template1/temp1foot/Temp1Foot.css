@@ -1,0 +1,13 @@
+.container-fluid-foot {
+    text-align: center;
+    font-family: "Montserrat-Light", sans-serif;
+    background-color: #f3f3f3;
+    color: gray;
+    width: 100%;
+    font-size: .9rem;
+    height: 50px;
+}
+
+.container-txt {
+    margin-top: 2%;
+}

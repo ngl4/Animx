@@ -24,7 +24,7 @@ export default canvas => {
 
     function buildScene() {
         const scene = new THREE.Scene();
-        scene.background = new THREE.Color("#FFF");
+        scene.background = new THREE.Color("#F3F3F3");
 
         return scene;
     }

@@ -8,6 +8,7 @@ import View from "./pages/Workspace/View";
 import NoMatch from "./pages/NoMatch";
 import Template1 from "./pages/Template1";
 
+
 const App = () => (
   <Router>
     <div>

@@ -1,27 +1,42 @@
 import React, { Component } from "react";
 import "./Template1.css";
-import Nav from "../../components/Nav";
 import Temp13D from "./temp13D/Temp13D";
 import Temp1Nav from "./temp1Nav";
+import About from "./About";
+import Portfolio from "./Portfolio";
+import Contact from "./Contact";
+import Temp1Foot from "./temp1foot";
 
 
 class Template1 extends Component {
-  state = {
+    state = {
 
-  };
+    };
 
-  render() {
+    render() {
 
-    return (
-      <div>
-      <Temp1Nav />
-      <Temp13D />
-      <div className="jumbotron mt-5 text-center">
-        Content for Basic "About Me" Website, will include "Photo" component and maybe some other effects with more time!
-      </div>
-      </div>
-    );
-  }
+        return (
+            <div>
+                <Temp1Nav />
+                <Temp13D />
+                <div div className="abt" style={{ display: 'flex', justifyContent: 'center', }}>
+                    <About />
+                </div>
+                <div div className="port" style={{ display: 'flex', justifyContent: 'center', }}>
+                    <Portfolio />
+                </div>
+                <div div className="port" style={{ display: 'flex', justifyContent: 'left', }}>
+                    <Contact />
+                </div>
+                <div div className="port" style={{ display: 'flex', justifyContent: 'left', }}>
+                    <Temp1Foot />
+                </div>
+            </div>
+
+
+
+        );
+    }
 }
 
 export default Template1;

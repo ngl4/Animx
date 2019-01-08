@@ -1,29 +1,19 @@
-.navContent {
-    position: relative;
-    width: 100%;
+.numbers {
+    height: 200px;
+    width: 200px;
+    margin-bottom: 3%;
+
+}
+
+.row {
+    background-color: #F3f3f3;
     text-align: center;
-
 }
 
-.btn-light {
-    background-color:white;
-    border:none;
-    font-size: .8rem;
-    margin: 2%;
-}
-
-
-
-#abtBtn:hover{ background-color:#f3f3f3;} 
-#portBtn:hover{ background-color: #f3f3f3;}
-#blgBtn:hover{ background-color: #f3f3f3;}
-#ctcBtn:hover{ background-color: #f3f3f3;}
-
-.btn-light a:link{ color:gray; } 
-.btn-light a:visited{ color: gray } 
-.btn-light a:hover{ color:gray;} 
-.btn-light a:active{ color:gray;}
-
+a.projects{ color:gray; } 
+a.projects:visited{ color: gray } 
+a.projects:hover{ -webkit-animation:colorchange 20s infinite alternate;;} 
+a.projects:active{ color:gray;}
 
 @-webkit-keyframes colorchange {
     0% {
