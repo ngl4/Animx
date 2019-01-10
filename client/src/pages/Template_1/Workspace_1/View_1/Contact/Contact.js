@@ -10,12 +10,12 @@ class Contact extends Component {
 
 
             <div className="contact-container">
-                {/* <ScrollableAnchor id={'section4'}> */}
+                <ScrollableAnchor id={'section4'}>
                 <div>
                     CONTACT ME BLURB:
             <div class="content">Ipsum nunc aliquet bibendum enim.
                     Ullamcorper malesuada proin libero nunc consequat interdum
-                    varius sit amet. <a href="" id="linkhover">Vitae congue mauris rhoncus aenean.</a>
+                    varius sit amet. <a href="./" id="linkhover">Vitae congue mauris rhoncus aenean.</a>
             </div>
 
                 </div>
@@ -47,7 +47,7 @@ class Contact extends Component {
                     </div>
 
                 </div>
-                {/* </ScrollableAnchor> */}
+                </ScrollableAnchor>
             </div>
         );
     }
