@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Contact.css";
-// import ScrollableAnchor from "react-scrollable-anchor";
+import ScrollableAnchor from "react-scrollable-anchor";
 
 
 class Contact extends Component {
@@ -32,7 +32,7 @@ class Contact extends Component {
                     </div>
                 </div>
 
-                <div className="row" id="faicons">
+                <div className="row" id="faicons1">
 
                     <div class="col-sm-1">
                         <i class="fab fa-linkedin-in"></i>

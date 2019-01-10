@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import "./Portfolio.css";
-import one from '../assets/images/one.png'; // with import
+import one from '../assets/images/one.png'; 
 import two from '../assets/images/two.png';
 import three from '../assets/images/three.png';
 import four from '../assets/images/four.png';
 import five from '../assets/images/five.png';
 import six from '../assets/images/six.png';
+import AOS from 'aos';
+
+AOS.init(); 
+
 class About extends Component {
 
     render() {
@@ -16,7 +20,7 @@ class About extends Component {
                         <div class="card">
                             <div class="card-body">
                                 <img className="numbers" id="proj1" alt="project" src={one} />
-                                <h5 class="card-title"><a href="" class="projects">Project 1</a></h5>
+                                <h5 class="card-title"><a href="" class="projects" data-aos="fade-zoom-in">Project 1</a></h5>
                                 <p class="card-text">Elementum tempus egestas sed sed. Accumsan sit amet nulla facilisi.
                                 Lorem dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Sed euismod nisi porta
                                 lorem mollis aliquam ut porttitor leo.
