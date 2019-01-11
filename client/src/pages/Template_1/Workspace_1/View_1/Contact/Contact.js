@@ -15,7 +15,7 @@ class Contact extends Component {
                     CONTACT ME BLURB:
             <div class="content">Ipsum nunc aliquet bibendum enim.
                     Ullamcorper malesuada proin libero nunc consequat interdum
-                    varius sit amet. <a href="" id="linkhover">Vitae congue mauris rhoncus aenean.</a>
+                    varius sit amet. <a href="./" id="linkhover">Vitae congue mauris rhoncus aenean.</a>
             </div>
 
                 </div>
