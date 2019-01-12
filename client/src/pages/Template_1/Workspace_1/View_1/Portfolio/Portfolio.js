@@ -1,34 +1,15 @@
 import React, { Component } from "react";
 import "./Portfolio.css";
-import one from '../assets/images/one.png'; // with import
+import one from '../assets/images/one.png'; 
 import two from '../assets/images/two.png';
 import three from '../assets/images/three.png';
 import four from '../assets/images/four.png';
 import five from '../assets/images/five.png';
 import six from '../assets/images/six.png';
-import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom';
 import Fade from 'react-reveal/Fade';
 
-const portCont = props => {
-    console.log('render', props.visible);
-    const style = {
-      display: props.visible ? 'block' : 'none',
-      marginTop: '20px',
-      width: '200px',
-      height: '200px',
-      backgroundColor: 'red',
-    };
-    return (<div style={style}/>);
-  };
-  
-  portCont.propTypes = {
-    visible: PropTypes.bool,
-  }
 
 class About extends Component {
-
-
     render() {
         return (
 
