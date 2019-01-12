@@ -17,16 +17,20 @@
 }
 
 #email {
-    margin-top: 2%;
+    margin-top: 1.5%;
+    margin-left: -2%;
     font-size: .8rem;
     -webkit-animation:colorchange 20s infinite alternate;
 }
 
 #faicons {
     background-color: white;
-    margin-top: 2%;
-    margin-left: -2.5%;
+    margin-top: -.5%;
+}
 
+#faicons1 {
+  background-color: white;
+  margin-top: -4%;
 }
 
 

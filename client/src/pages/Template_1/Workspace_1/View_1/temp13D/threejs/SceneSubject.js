@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import alphaTexture from '../../assets/textures/stripes_gradient.jpg';
+import alphaTexture from '../../assets/textures/gradient-2.jpg';
 
 export default scene => {    
     const group = new THREE.Group();
