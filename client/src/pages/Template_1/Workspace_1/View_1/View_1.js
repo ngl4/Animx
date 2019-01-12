@@ -6,6 +6,10 @@ import About from "./About";
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 import Temp1Foot from "./temp1foot";
+import ScrollableAnchor from 'react-scrollable-anchor';
+import Fade from 'react-reveal/Fade';
+
+
 
 class View_1 extends Component {
   state = {};
@@ -23,23 +27,42 @@ class View_1 extends Component {
         </div>
         <hr />
         <div className="mt-5">
-          <div>
-                <Temp1Nav />
+        <div>
+                <Temp1Nav 
+                  AboutUrl="#About"
+                  PortfolioUrl="#Portfolio"
+                  ContactUrl="#Contact"/>
+
+              <Fade Cascade>
                 <Temp13D />
+              </Fade>
+
+                <ScrollableAnchor id={"About"}>
                 <div div className="abt" style={{ display: 'flex', justifyContent: 'center', }}>
                     <About />
                 </div>
+                </ScrollableAnchor>
+
+                <ScrollableAnchor id={"Portfolio"}>
                 <div div className="port" style={{ display: 'flex', justifyContent: 'center', }}>
                     <Portfolio />
                 </div>
-                <div div className="port" style={{ display: 'flex', justifyContent: 'left', }}>
+                </ScrollableAnchor>
+
+ 
+                <ScrollableAnchor id={"Contact"}>
+                <div div className="contact" style={{ display: 'flex', justifyContent: 'center', }}>
                     <Contact />
                 </div>
-                <div div className="port" style={{ display: 'flex', justifyContent: 'left', }}>
+                </ScrollableAnchor>
+                
+        
+                <div div className="footer" style={{ display: 'flex', justifyContent: 'left', }}>
                     <Temp1Foot />
                 </div>
-            </div>
+      
 
+            </div>
         </div>
       </div>
     );

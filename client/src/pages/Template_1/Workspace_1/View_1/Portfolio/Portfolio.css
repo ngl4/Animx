@@ -1,14 +1,17 @@
 .numbers {
-    height: 200px;
-    width: 200px;
-    margin-bottom: 3%;
+  height: 200px;
+  width: 200px;
+  margin-bottom: 3%;
 
 }
 
 .row {
-    background-color: #F3f3f3;
-    text-align: center;
+  background-color: #F3f3f3;
+  text-align: center;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
+
 
 a.projects{ color:gray; } 
 a.projects:visited{ color: gray } 
