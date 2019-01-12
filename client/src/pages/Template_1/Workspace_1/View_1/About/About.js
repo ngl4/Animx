@@ -1,14 +1,18 @@
 import React, { Component } from "react";
 import "./About.css";
+import Fade from 'react-reveal/Fade';
 class About extends Component {
 
   render() {
     return (
+    
       <div class="aboutMe">
+       <Fade Cascade>
         <div className="abt" style={{ display: 'flex', justifyContent: 'center', }}>
         <i class="fas fa-user"></i>
           <div class="card">
             <div class="card-body">
+          
               <h3 class="card-title">About Me</h3>
               <p class="card-text">   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                       labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -19,9 +23,11 @@ class About extends Component {
             </div>
           </div>
 
-
+       
         </div>
+        </Fade>
       </div>
+    
 
     );
   }

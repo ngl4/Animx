@@ -1,108 +1,108 @@
 .contact-container {
-    margin-top: 1%;
-    margin-left: 6%;
-    width: 100%;
-    font-family: "Montserrat-Light";
-    font-size: .8rem;
-    padding: 3%;
-    color: grey;
+  margin-top: 1%;
+  width: 70%;
+  font-family: "Montserrat-Light";
+  font-size: .8rem;
+  padding: 3%;
+  color: grey;
 }
 
 .content {
-    width: 70%;
+  width: 70%;
 }
 
 #linkhover {
-    -webkit-animation:colorchange 20s infinite alternate;
+  -webkit-animation:colorchange 20s infinite alternate;
 }
 
 #email {
-    margin-top: 1.5%;
-    margin-left: -2%;
-    font-size: .8rem;
-    -webkit-animation:colorchange 20s infinite alternate;
+  margin-top: 2.3%;
+  font-size: .8rem;
+  -webkit-animation:colorchange 20s infinite alternate;
 }
 
 #faicons {
-    background-color: white;
-    margin-top: -.5%;
+  text-align: center;
+  background-color: white;
+  margin-top: 0;
 }
 
 #faicons1 {
-  background-color: white;
-  margin-top: -4%;
+background-color: white;
+/* margin-top: -4%; */
 }
 
 
-.fa-envelope, .fa-linkedin-in, .fa-github, .fa-google-plus-g {
-    font-size: 24px;
-    width: 56px;
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+.fa-envelope, .fa-linkedin-in, .fa-github, .fa-twitter, .fa-instagram, .fa-facebook-square {
+  margin-top: -2.3%;
+  font-size: 24px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 
-    border-radius: 360px;
-    -webkit-animation:colorchange 20s infinite alternate;
+  border-radius: 360px;
+  -webkit-animation:colorchange 20s infinite alternate;
 }
 
-.fa-envelope:hover, .fa-linkedin-in:hover, .fa-github:hover, .fa-google-plus-g:hover {
-    box-shadow: 0 0px 0px rgba(0,0,0,0.25), 0 6px 10px rgba(0,0,0,0.22);
-    -webkit-animation:colorchange 20s infinite alternate;
+.fa-envelope:hover, .fa-linkedin-in:hover, .fa-github:hover, .fa-twitter:hover, .fa-instagram:hover, .fa-facebook-square:hover {
+  box-shadow: 0 0px 0px rgba(0,0,0,0.25), 0 6px 10px rgba(0,0,0,0.22);
+  -webkit-animation:colorchange 20s infinite alternate;
 }
 
 @-webkit-keyframes colorchange {
-    0% {
-  
-      color:#F48FB1;
-    }
-  
-    10% {
-  
-      color:  #D2B4DE;
-    }
-  
-    20% {
-  
-      color:#3F51B5;
-    }
-  
-    30% {
-  
-      color:#85C1E9;
-    }
+  0% {
 
-    40% {
-
-        color: #00796B;
-      }
-    
-      50% {
-    
-        color: #82E0AA;
-      }
-    
-      60% {
-    
-        color:#A2D9CE;
-      }
-    
-      70% {
-    
-        color:#FFC107;
-      }
-      80% {
-    
-        color: #EDBB99;
-      }
-    
-      90% {
-    
-        color: #D98880;
-      }
-    
-      100% {
-        color: #F76FC1;
-    }
+    color:#F48FB1;
   }
+
+  10% {
+
+    color:  #D2B4DE;
+  }
+
+  20% {
+
+    color:#3F51B5;
+  }
+
+  30% {
+
+    color:#85C1E9;
+  }
+
+  40% {
+
+      color: #00796B;
+    }
+  
+    50% {
+  
+      color: #82E0AA;
+    }
+  
+    60% {
+  
+      color:#A2D9CE;
+    }
+  
+    70% {
+  
+      color:#FFC107;
+    }
+    80% {
+  
+      color: #EDBB99;
+    }
+  
+    90% {
+  
+      color: #D98880;
+    }
+  
+    100% {
+      color: #F76FC1;
+  }
+}

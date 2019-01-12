@@ -6,16 +6,18 @@ import three from '../assets/images/three.png';
 import four from '../assets/images/four.png';
 import five from '../assets/images/five.png';
 import six from '../assets/images/six.png';
+import Fade from 'react-reveal/Fade';
 
 
 class About extends Component {
-
     render() {
         return (
+
             <div className="portCont">
                 <div class="row" style={{ display: 'flex', justifyContent: 'center', }}>
                     <div class="col-sm-4">
                         <div class="card">
+                          <Fade left>
                             <div class="card-body">
                                 <img className="numbers" id="proj1" alt="project" src={one} />
                                 <h5 class="card-title"><a href="./" class="projects">Project 1</a></h5>
@@ -24,11 +26,13 @@ class About extends Component {
                                 lorem mollis aliquam ut porttitor leo.
                             </p>
                             </div>
+                            </Fade>
                         </div>
                     </div>
 
                     <div class="col-sm-4">
                         <div class="card">
+                        <Fade left>
                             <div class="card-body">
                                 <img className="numbers" alt="project" src={two} />
                                 <h5 class="card-title"><a href="./" class="projects">Project 2</a></h5>
@@ -37,11 +41,13 @@ class About extends Component {
                                 id venenatis a condimentum vitae sapien.
                             </p>
                             </div>
+                            </Fade>
                         </div>
                     </div>
 
                     <div class="col-sm-4">
                         <div class="card">
+                        <Fade left>
                             <div class="card-body">
                                 <img className="numbers" alt="project" src={three} />
                                 <h5 class="card-title"><a href="./" class="projects">Project 3</a></h5>
@@ -50,6 +56,7 @@ class About extends Component {
                                 Risus nullam eget felis eget nunc lobortis.
                             </p>
                             </div>
+                            </Fade>
                         </div>
                     </div>
                 </div>
@@ -58,6 +65,7 @@ class About extends Component {
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="card">
+                        <Fade right>
                             <div class="card-body">
                                 <img className="numbers" alt="project" src={four} />
                                 <h5 class="card-title"><a href="./" class="projects">Project 4</a></h5>
@@ -66,11 +74,13 @@ class About extends Component {
                                 ut eu sem integer vitae.
                              </p>
                             </div>
+                            </Fade>
                         </div>
                     </div>
 
                     <div class="col-sm-4">
                         <div class="card">
+                        <Fade right>
                             <div class="card-body">
                                 <img className="numbers" alt="projects" src={five} />
                                 <h5 class="card-title"><a href="./" class="projects">Project 5</a></h5>
@@ -79,11 +89,13 @@ class About extends Component {
                                 faucibus.
                              </p>
                             </div>
+                            </Fade>
                         </div>
                     </div>
 
                     <div class="col-sm-4">
                         <div class="card">
+                        <Fade right>
                             <div class="card-body">
                                 <img className="numbers" alt="project" src={six} />
                                 <h5 class="card-title"><a href="./" class="projects">Project 6</a></h5>
@@ -92,10 +104,12 @@ class About extends Component {
                                viverra.
                             </p>
                             </div>
+                            </Fade>
                         </div>
                     </div>
                 </div>
             </div>
+      
 
 
         );

@@ -6,7 +6,7 @@ import Content_1 from "./pages/Template_1/Workspace_1/Content_1";
 import View_1 from "./pages/Template_1/Workspace_1/View_1";
 import NoMatch from "./pages/NoMatch";
 import Template from "./pages/Template";
-import Template_1 from "./pages/Template_1/Workspace_1"
+import Template_1 from "./pages/Template_1/Workspace_1";
 
 const App = () => (
   <Router>
