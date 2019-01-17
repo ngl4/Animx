@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const temp1textSchema = new Schema({
-  section: {type: String, required: true, unique: true}, //ie, about; portfolio1; portfolio2; contact
-  type: {type: String, required: true, unique: true}, //ie, about-title; portfolio1-textarea; portfolio2-title
+  section: {type: String, required: true, unique: true}, 
+  type: {type: String},
   content: {type: String, required: true},
   image: {
     type: Schema.Types.ObjectId,

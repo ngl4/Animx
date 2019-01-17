@@ -9,7 +9,7 @@ const temp1imageSchema = new Schema({
   size: { type: Number, required: true },
   name: { type: String, required: true },
   type: { type: String, required: true }, // ie, about-image; portfolio1-image; portfolio2-image
-  section: { type: String, required: true } //ie, about; portfolio1; portfolio2; contact
+  section: { type: String, required: true } //ie, same as text section title!!!
 });
 
 const Temp1image = mongoose.model("Temp1image", temp1imageSchema);
