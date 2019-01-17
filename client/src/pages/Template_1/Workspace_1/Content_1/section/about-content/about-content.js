@@ -2,6 +2,18 @@ import React, { Component } from "react";
 import "./about-content.css";
 
 class AboutContent extends Component {
+
+  state = {
+    about_title: "",
+    about_title_id: "",
+    about_textarea: "",
+    about_textarea_id: "",
+    uploadMessage: "",
+    errMessage: "",
+    imageUrl: "",
+    isAboutSubmit: false
+  }
+
   render() {
     return (
       <div>
