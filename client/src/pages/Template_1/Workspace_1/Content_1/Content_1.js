@@ -15,9 +15,7 @@ class Content_1 extends Component {
           contentUrl="/template_1/workspace_1/content_1"
           viewUrl="/template_1/workspace_1/view_1"
         />
-        <div className="jumbotron mt-5 text-center mb-0">
-          This is where you UPLOAD contents!!!
-          <hr />
+        <div className="jumbotron text-center mb-0">
 
         {/* please do all the uploads insdie of their own content section */}
           <AboutContent />

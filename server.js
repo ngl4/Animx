@@ -5,13 +5,13 @@ const PORT = process.env.PORT || 3001;
 const fs = require("fs");
 require("dotenv").config();
 
-
 //Init express app
 const app = express();
 
 //image upload to Amazon S3 Bucket
 const S3FS = require("s3fs");
-const s3fsImpl = new S3FS("cindytestbucket456", { //TODO: CHANGE BUCKET NAME
+const s3fsImpl = new S3FS("cindytestbucket456", {
+  //TODO: CHANGE BUCKET NAME
   accessKeyId: process.env.ACCESS_KEY_ID,
   secretAccessKey: process.env.SECRET_ACCESS_KEY,
   signatureVersion: "v4",
@@ -28,7 +28,6 @@ app.use(multipartyMiddleware);
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/animxDB";
 mongoose.connect(MONGODB_URI);
 const db = require("./models");
-
 
 // Send every request to the React app
 // Define any API routes before this runs
@@ -72,21 +71,16 @@ app.get("/api/displayImage", function(req, res, next) {
 app.post("/api/saveText/:type", function(req, res) {
   console.log(req.query);
   db.Temp1text.create(req.query)
-    .then(
-      dbModel => {
-        res.json(dbModel);
-      }
-
-    )
+    .then(dbModel => {
+      res.json(dbModel);
+    })
     .catch(err => res.json(err));
 });
 
 //All TextInput Display: Get Route
 app.get("/api/displayText", function(req, res) {
   db.Temp1text.find({})
-    .then(dbModel => 
-    res.json(dbModel)
-      )
+    .then(dbModel => res.json(dbModel))
     .catch(err => res.json(err));
 });
 
@@ -103,7 +97,18 @@ app.put("/api/updateText/:type", function(req, res) {
 app.delete("/api/deleteText/:type", function(req, res) {
   console.log(req.params);
   const type = req.params.type;
-  db.Temp1text.deleteMany({ section: [type + "_title", type + "_textarea"] })
+  db.Temp1text.deleteMany({
+    section: [
+      type + "_title",
+      type + "_textarea",
+      type + "_email",
+      type + "_github",
+      type + "_linkedin",
+      type + "_twitter",
+      type + "_instagram",
+      type + "_facebook",
+    ]
+  })
     .then(dbModel => console.log(dbModel))
     .then(dbModel => res.json(dbModel))
     .catch(err => res.status(422).json(err));
@@ -113,27 +118,21 @@ app.delete("/api/deleteText/:type", function(req, res) {
 if (process.env.NODE_ENV === "production") {
   console.log("SECTION1");
   app.use(express.static("client/build"));
-
-}
-else {
+} else {
   console.log("SECTION2");
   app.use(express.static("client/build"));
 }
 
-app.get('/*', (req, res) => {
-  if (process.env.NODE_ENV === 'production') {
+app.get("/*", (req, res) => {
+  if (process.env.NODE_ENV === "production") {
     console.log("SECTION3");
-    res.sendFile(path.join(__dirname, '/client/build/index.html'))
+    res.sendFile(path.join(__dirname, "/client/build/index.html"));
   } else {
     console.log("SECTION4");
-    res.sendFile(path.join(__dirname, '/client/build/index.html'));
+    res.sendFile(path.join(__dirname, "/client/build/index.html"));
   }
 });
-
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
-
-
-
