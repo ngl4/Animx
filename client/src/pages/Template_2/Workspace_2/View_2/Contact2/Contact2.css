@@ -2,11 +2,13 @@
     font-family: 'Noto Serif', serif;
     background-color:  #202121;
     color: ghostwhite;
-    font-size: .8rem;
+    font-size: 1rem;
     text-align: center;
     padding: 6%;
     border-radius: 60%;
-    width: 35%;
+    width: 40%;
+    margin-left: 33%;
+    margin-top: 9%;
 
 }
 

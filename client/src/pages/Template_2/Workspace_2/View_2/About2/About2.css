@@ -1,17 +1,18 @@
 .aboutArch {
-    background-color:  #202121;
-    padding: 3%;
+    padding-right: 3%;
+    padding-left: 3%;
+    padding-bottom: 3%;
+    padding-top: 120px;
+    border-radius: 40%;
+    margin-top: 3%;
+    width: 90%;
 }
 
  #cardArch {
     font-family: "Noto Serif", serif;
+    background-color:  #202121;
 
-}
 
-.card-text-again {
-    width: 70%;
-    font-size: 0.8rem;
-    margin-left: 12%;
 }
 
 .card-body-basic {
@@ -30,7 +31,6 @@
     padding-right: 5%;
     padding-top: 2%;
     border-radius: 60%;
-    margin-left: 10%;
 
 }
 

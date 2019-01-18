@@ -1,16 +1,20 @@
 import React, { Component } from "react";
 import "./Contact2.css";
-import Zoom from 'react-reveal/Zoom';
+import Flip from 'react-reveal/Flip';
+import Fade from 'react-reveal/Fade';
+import Nav2 from "../Nav2";
 
 class Contact2 extends Component {
 
     render() {
         return (
 
+            <Flip left cascade>
+            <Nav2 />
+       
 
             <div className="contact-container-two">
-                <Zoom Cascade Up>
-
+             
             <p class="contentArch">
                 CONTACT ME:
             </p>
@@ -57,8 +61,9 @@ class Contact2 extends Component {
                     </div>
                     </div>
 
-                </Zoom>
+            
             </div>
+            </Flip>
         );
     }
 }
