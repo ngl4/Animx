@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import "./Contact.css";
 import Zoom from 'react-reveal/Zoom';
@@ -9,10 +10,10 @@ class Contact extends Component {
 
 
             <div className="contact-container">
-                <Zoom Cascade Up>
+                <Zoom>
 
                     CONTACT ME:
-            <div class="content">Ipsum nunc aliquet bibendum enim.
+            <div className="content">Ipsum nunc aliquet bibendum enim.
                             Ullamcorper malesuada proin libero nunc consequat interdum
                             varius sit amet. Vitae congue mauris rhoncus aenean.
         
@@ -26,7 +27,7 @@ class Contact extends Component {
 
                         <div class="col-sm-.1" id="email">
                             EMAIL@EMAIL.COM
-                    </div>
+                        </div>
                     </div>
 
                     <div className="row" id="faicons">
@@ -58,4 +59,4 @@ class Contact extends Component {
     }
 }
 
-export default Contact;  
+export default Contact;

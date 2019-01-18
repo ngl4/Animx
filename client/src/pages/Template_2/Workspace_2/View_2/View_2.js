@@ -22,11 +22,11 @@ class View_2 extends Component {
 
         <div><Nav2 /></div>
         <div><Temp23D /></div> 
-        <div><About2 /></div>
+        {/* <div><About2 /></div>
         <div><Portfolio2 /></div>
-        <div div className="Contact2" style={{ display: 'flex', justifyContent: 'center', }}>
+        <div className="Contact2" style={{ display: 'flex', justifyContent: 'center', }}>
         <Contact2 />
-        </div>
+        </div> */}
         <div><Foot2 /></div>
       </div>
     );

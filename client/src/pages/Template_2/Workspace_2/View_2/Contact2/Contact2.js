@@ -35,23 +35,23 @@ class Contact2 extends Component {
 
                     <div className="row" id="contactFA">
 
-                        <div class="col-sm-1">
+                        <div class="col-sm-2">
                             <i class="fab fa-linkedin-in" id="font"></i>
                         </div>
 
-                        <div class="col-sm-1">
+                        <div class="col-sm-2">
                             <i class="fab fa-github" id="font"></i>
                         </div>
 
-                        <div class="col-sm-1">
+                        <div class="col-sm-2">
                             <i class="fab fa-twitter" id="font"></i>
                         </div>
 
-                        <div class="col-sm-1">
+                        <div class="col-sm-2">
                             <i class="fab fa-instagram" id="font"></i>
                         </div>
 
-                        <div class="col-sm-1">
+                        <div class="col-sm-2">
                             <i class="fab fa-facebook-square" id="font"></i>
                         </div>
                     </div>

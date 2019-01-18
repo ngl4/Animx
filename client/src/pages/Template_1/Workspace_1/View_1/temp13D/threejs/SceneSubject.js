@@ -6,11 +6,11 @@ export default scene => {
 
     const subjectGeometry = deformGeometry(new THREE.IcosahedronGeometry(10, 2));
     
-    const subjectMaterial = new THREE.MeshStandardMaterial({ color: "#000", transparent: true, side: THREE.DoubleSide, alphaTest: 0.5 });
+    const subjectMaterial = new THREE.MeshStandardMaterial({ color: "#191919", transparent: true, side: THREE.DoubleSide, alphaTest: 0.5 });
     subjectMaterial.alphaMap = new THREE.TextureLoader().load(alphaTexture);
     subjectMaterial.alphaMap.magFilter = THREE.NearestFilter;
     subjectMaterial.alphaMap.wrapT = THREE.RepeatWrapping;
-    subjectMaterial.alphaMap.repeat.y = 1;
+    subjectMaterial.alphaMap.repeat.y = 15;
 
     const subjectMesh = new THREE.Mesh(subjectGeometry, subjectMaterial);
         
@@ -25,8 +25,8 @@ export default scene => {
 
     group.rotation.z = Math.PI/4;
 
-    const speed = 0.02;
-    const textureOffsetSpeed = 0.02;
+    const speed = 0.03;
+    const textureOffsetSpeed = 0.06;
 
     function deformGeometry(geometry) {
         for (let i=0; i<geometry.vertices.length; i+=2) {
