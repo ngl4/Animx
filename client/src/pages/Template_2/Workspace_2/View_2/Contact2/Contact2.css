@@ -1,0 +1,127 @@
+.contact-container-two {
+    font-family: 'Noto Serif', serif;
+    background-color:  #202121;
+    color: ghostwhite;
+    font-size: .8rem;
+    text-align: center;
+    padding: 6%;
+
+}
+
+.contentArch {
+    text-align: center;
+    margin-top: 5%;
+}
+
+
+ #contactFA {
+    background-color: #202121;
+    color: ghostwhite;
+} 
+
+
+.archContact {
+    width: 50%;
+    text-align: center;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+ #emailID {
+    background-color: #202121;
+    color: ghostwhite;
+    margin-top: 2%;
+} 
+
+
+#faicons {
+    text-align: center;
+    background-color: white;
+    margin-top: 0;
+  }
+  
+#font {
+  color: ghostwhite;
+  /* margin-top: -4%; */
+  }
+
+  .envelope {
+  text-align: center;
+  margin-left: 20%;
+  }
+  
+  
+  #font.fa-envelope, #font.fa-linkedin-in, #font.fa-github, #font.fa-twitter, #font.fa-instagram, #font.fa-facebook-square {
+    margin-top: -2.3%;
+    font-size: 24px;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* transition: all 0.3s cubic-bezier(.25, .8, .25, 1); */
+  
+    border-radius: 360px;
+    /* -webkit-animation:colorchange 20s infinite alternate; */
+  }
+  
+  /* .fa-envelope:hover, .fa-linkedin-in:hover, .fa-github:hover, .fa-twitter:hover, .fa-instagram:hover, .fa-facebook-square:hover {
+    box-shadow: 0 0px 0px rgba(0,0,0,0.25), 0 6px 10px rgba(0,0,0,0.22);
+    -webkit-animation:colorchange 20s infinite alternate;
+  }
+  
+  @-webkit-keyframes colorchange {
+    0% {
+  
+      color:#F48FB1;
+    }
+  
+    10% {
+  
+      color:  #D2B4DE;
+    }
+  
+    20% {
+  
+      color:#3F51B5;
+    }
+  
+    30% {
+  
+      color:#85C1E9;
+    }
+  
+    40% {
+  
+        color: #00796B;
+      }
+    
+      50% {
+    
+        color: #82E0AA;
+      }
+    
+      60% {
+    
+        color:#A2D9CE;
+      }
+    
+      70% {
+    
+        color:#FFC107;
+      }
+      80% {
+    
+        color: #EDBB99;
+      }
+    
+      90% {
+    
+        color: #D98880;
+      }
+    
+      100% {
+        color: #F76FC1;
+    }
+  }
+   */

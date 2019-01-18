@@ -30,11 +30,18 @@ class Template extends Component {
                 </a>
               </div>
 
+          
               <div className="card card-size col-md-3 m-2">
-                <img className="card-img-top" src="" alt="Cardcap 2" />
+              <a href="/template_2/workspace_2" alt="template_2">
+                  <img
+                    className="card-img-top"
+                    src="./images/templates.png"
+                    alt="Cardcap 1"
+                  />
                 <div className="card-body">
                   <p className="card-text">Template 2</p>
                 </div>
+                </a>
               </div>
 
               <div className="card card-size col-md-3 m-2">
