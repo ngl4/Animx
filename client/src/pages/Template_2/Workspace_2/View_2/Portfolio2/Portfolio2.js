@@ -8,7 +8,7 @@ import pic6 from "./images/six.jpg";
 
 
 
-const images = [pic1, pic2, pic3, pic4, pic5, pic6];
+//const images = [pic1, pic2, pic3, pic4, pic5, pic6];
 const Portfolio2 = props => {
     return (
         <div className="gallery">

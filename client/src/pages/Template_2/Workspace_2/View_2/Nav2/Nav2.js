@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Fade from 'react-reveal/Fade';
+//import Fade from 'react-reveal/Fade';
 import ReactDOM from 'react-dom';
-import Temp23D from "../3D2/Temp23d";
-import About2 from "../About2";
+//import Temp23D from "../3D2/Temp23d";
+//import About2 from "../About2";
 import Menu from "./menu";
 import Header from "./header";
 import "./Nav2.css";

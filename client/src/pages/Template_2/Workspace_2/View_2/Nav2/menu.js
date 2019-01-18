@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "./Nav2.css";
-import About2 from "../About2";
-import Portfolio2 from "../Portfolio2";
+//import About2 from "../About2";
+//import Portfolio2 from "../Portfolio2";
 // import Contact2 from "../
 
 class Menu extends Component {
