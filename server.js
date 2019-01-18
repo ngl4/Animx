@@ -30,12 +30,6 @@ mongoose.connect(MONGODB_URI);
 const db = require("./models");
 
 
-
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
-
 // Send every request to the React app
 // Define any API routes before this runs
 
@@ -115,7 +109,26 @@ app.delete("/api/deleteText/:type", function(req, res) {
     .catch(err => res.status(422).json(err));
 });
 
+// Serve up static assets (usually on heroku)
+if (process.env.NODE_ENV === "production") {
+  console.log("SECTION1");
+  app.use(express.static("client/build"));
 
+}
+else {
+  console.log("SECTION2");
+  app.use(express.static("client/build"));
+}
+
+app.get('/*', (req, res) => {
+  if (process.env.NODE_ENV === 'production') {
+    console.log("SECTION3");
+    res.sendFile(path.join(__dirname, '/client/build/index.html'))
+  } else {
+    console.log("SECTION4");
+    res.sendFile(path.join(__dirname, '/client/build/index.html'));
+  }
+});
 
 
 app.listen(PORT, function() {
