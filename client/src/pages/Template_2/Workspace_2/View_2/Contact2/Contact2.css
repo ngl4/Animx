@@ -1,3 +1,7 @@
+.Contact2 {
+  background-color: #202121;
+}
+
 .contact-container-two {
     font-family: 'Noto Serif', serif;
     background-color:  #202121;
@@ -5,6 +9,7 @@
     font-size: .8rem;
     text-align: center;
     padding: 6%;
+    width: 60%;
 
 }
 
@@ -17,6 +22,7 @@
  #contactFA {
     background-color: #202121;
     color: ghostwhite;
+    margin-left: 5%;
 } 
 
 
@@ -42,14 +48,12 @@
   
 #font {
   color: ghostwhite;
-  /* margin-top: -4%; */
+  margin-top: -4%;
   }
 
   .envelope {
-  text-align: center;
-  margin-left: 20%;
+  margin-left: 2%;
   }
-  
   
   #font.fa-envelope, #font.fa-linkedin-in, #font.fa-github, #font.fa-twitter, #font.fa-instagram, #font.fa-facebook-square {
     margin-top: -2.3%;

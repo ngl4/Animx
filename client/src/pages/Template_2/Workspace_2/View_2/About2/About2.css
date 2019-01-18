@@ -1,0 +1,26 @@
+.card1 {
+    background-color: #202121;
+    color: ghostwhite;
+    border: none;
+    font-family: "Noto", sans-serif;
+    font-size: .8rem;
+}
+
+.h3 {
+    font-family: "Montserrat", sans-serif; 
+} */
+
+.aboutArch {
+    width: 70%;
+    font-family: "Noto", sans-serif;   
+    color: ghostwhite;
+    background-color: #202121;
+    margin: 7%;
+
+} 
+
+.fa-user {
+    font-size: 10rem;
+    margin-right: 3%;
+}
+

@@ -25,6 +25,10 @@
 
 }
 
+.linksList {
+    font-family: 'Noto Serif', serif;
+}
+
 
 a.linksList{color: ghostwhite; } 
 a.linksList:visited{ color: ghostwhite;} 

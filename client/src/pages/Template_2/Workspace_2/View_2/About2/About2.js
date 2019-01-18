@@ -7,11 +7,11 @@ class About2 extends Component {
   render() {
     return (
     
-      <div class="aboutMe">
+      <div class="aboutArch">
        <Fade Cascade>
-        <div className="abt" style={{ display: 'flex', justifyContent: 'center', }}>
+        <div className="archi" style={{ display: 'flex', justifyContent: 'center', }}>
         <i class="fas fa-user"></i>
-          <div class="card">
+          <div class="card1">
             <div class="card-body">
           
               <h3 class="card-title">About Me</h3>
