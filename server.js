@@ -29,40 +29,53 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/animxDB";
 mongoose.connect(MONGODB_URI);
 const db = require("./models");
 
-// Send every request to the React app
-// Define any API routes before this runs
 
 //Image Upload: Amazon Post route
-app.post("/api/testupload", function(req, res) {
-  // console.log(req.files);
-  // console.log(req.file);
+app.post("/api/uploadImage", function(req, res) {
+  //console.log(req.files);
+  console.log(req.query);
   const file = req.files.myImage;
   console.log(file);
 
-  const stream = fs.createReadStream(file.path);
-  s3fsImpl.writeFile(file.originalFilename, stream).then(function() {
-    fs.unlink(file.path, function(err) {
-      if (err) {
-        console.log(err);
-      }
+  if (req.files.myImage.size > 2000000) {
+    return res.json({
+      err: "File size is over the limit of 2mb"
     });
-  });
-
-  file.section = ""; //TODO: get this file input from the front end
-  file.headers = "image";
-  console.log(file);
-
-  db.Temp1image.create(file)
-    .then(dbTemp1image => {
-      //console.log(dbTemp1image);
-      return res.json(dbTemp1image);
-    })
-    .catch(err => res.json(err));
+  }else {
+    const stream = fs.createReadStream(file.path);
+    s3fsImpl.writeFile(file.originalFilename, stream).then(function() {
+      fs.unlink(file.path, function(err) {
+        if (err) {
+          console.log(err);
+        }
+      });
+    });
+  
+    file.section = req.query.section; // + "_title"; 
+    file.headers = "image";
+    //console.log(file);
+  
+    db.Temp1image.create(file)
+      .then(dbTemp1image => {
+        //console.log(dbTemp1image);
+        return res.json(dbTemp1image);
+      })
+      .catch(err => res.json(err));
+  }
 });
 
 //Image Upload: Amazon Get route
 app.get("/api/displayImage", function(req, res, next) {
   db.Temp1image.find({})
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
+});
+
+//Image Upload: Delete Image from MongoDB 
+app.delete("/api/deleteImage/:type", (req, res) => {
+  db.Temp1image.remove({ section: req.params.type })
+    .then(dbModel => console.log(dbModel))
+    // .then(dbModel => dbModel.remove())
     .then(dbModel => res.json(dbModel))
     .catch(err => res.status(422).json(err));
 });

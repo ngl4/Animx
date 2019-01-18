@@ -7,11 +7,10 @@ class PortfolioContentCard extends Component {
         <div className="row card-text">
           <div className="col-md-5 p-0 d-flex justify-content-end">
             <div className="card w-75 ml-5">
-              <div className="card-body">
+              <div className="card-body mt-0">
+              <h5 className="text-left mb-5"><u>Portfolio #{this.props.numOfPortfolio}</u></h5>
                 <form>
-                <h5 className="text-left mb-5"><u>Portfolio #{this.props.numOfPortfolio}</u></h5>
                 <p>Project Image</p>
-
                   <div className="custom-file">
                     <input
                       type="file"
@@ -38,8 +37,8 @@ class PortfolioContentCard extends Component {
           </div>
           <div className="col-md-6 p-0">
             <form className="mt-5">
-              <div className="form-group">
-                <label for="portfolioFormControlInput1" className="ml-0">
+              <div className="form-group mt-5">
+                <label for="portfolioFormControlInput1" className="ml-0 mt-5">
                   Title
                 </label>
                 <div className="d-flex justify-content-center">
