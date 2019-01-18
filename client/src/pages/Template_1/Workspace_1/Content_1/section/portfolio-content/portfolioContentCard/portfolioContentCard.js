@@ -44,7 +44,7 @@ class PortfolioContentCard extends Component {
                 </label>
                 <div className="d-flex justify-content-center">
                   <input
-                    name="portfolio_title"
+                    name={"portfolio" + this.props.numOfPortfolio + "_title"}
                     value={this.props.portfolio_title}
                     onChange={this.props.handleInputChange}
                     className="form-control w-75"
@@ -58,7 +58,7 @@ class PortfolioContentCard extends Component {
                 <label for="portfolioFormControlTextarea1">Textarea</label>
                 <div className="d-flex justify-content-center">
                   <textarea
-                    name="portfolio_textarea"
+                    name={"portfolio" + this.props.numOfPortfolio + "_textarea"}
                     className="form-control w-75"
                     id="portfolioFormControlTextarea1"
                     value={this.props.portfolio_textarea}
@@ -69,8 +69,8 @@ class PortfolioContentCard extends Component {
                 {this.props.isPortfolioSubmit ? (
                   <button
                     type="button"
-                    data-section="portfolio"
-                    className="btn btn-primary btn-sm mr-2 ml-2 h-25 mt-5"
+                    data-section={"portfolio" + this.props.numOfPortfolio}
+                    className="btn btn-warning btn-sm mr-2 ml-2 h-25 mt-5"
                     disabled={
                       !(this.props.portfolio_title && this.props.portfolio_textarea)
                     }
@@ -81,7 +81,7 @@ class PortfolioContentCard extends Component {
                 ) : (
                   <button
                     type="button"
-                    data-section="portfolio"
+                    data-section={"portfolio" + this.props.numOfPortfolio}
                     className="btn btn-warning btn-sm mr-2 ml-2 h-25 mt-5"
                     disabled={
                       !(this.props.portfolio_title && this.props.portfolio_textarea)
@@ -95,7 +95,7 @@ class PortfolioContentCard extends Component {
                 <button
                   type="button"
                   className="btn btn-secondary btn-sm h-25 mt-5"
-                  data-section="portfolio"
+                  data-section={"portfolio" + this.props.numOfPortfolio}
                   onClick={this.props.handleFormDelete}
                 >
                   Delete All

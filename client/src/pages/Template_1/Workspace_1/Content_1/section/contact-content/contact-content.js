@@ -1,7 +1,114 @@
 import React, { Component } from "react";
 import "./contact-content.css";
+import axios from "axios";
 
 class ContactContent extends Component {
+
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    console.log("this is clicked!");
+    console.log(this.state.about_title);
+    console.log(this.state.about_textarea);
+
+    const type = event.target.dataset.section;
+    const component = this;
+
+    if (this.state.about_title) {
+
+      axios({
+        method: "post",
+        url: "/api/saveText/" + type,
+        params: {
+          section: type + "_title",
+          type: type + "_title",
+          content: this.state.about_title
+        }
+      })
+        .then(res => {
+          console.log(res);
+          component.setState({
+            isAboutSubmit: true
+          });
+
+        })
+        .catch(err => console.log(err));
+
+    }
+    if (this.state.about_textarea) {
+      axios({
+        method: "post",
+        url: "/api/saveText/" + type,
+        params: {
+          section: type + "_textarea",
+          type: type + "_textarea",
+          content: this.state.about_textarea
+        }
+      })
+        .then(res => {
+          console.log(res);
+          component.setState({
+            isAboutSubmit: true
+          });
+        })
+        .catch(err => console.log(err));
+    }
+
+  };
+
+  handleFormEdit = event => {
+    event.preventDefault();
+    var type = event.target.dataset.section
+
+    if (this.state.about_title) {
+      axios({
+        method: "put",
+        url: "/api/updateText/" + type,
+        params: {
+          _id: this.state.about_title_id,
+          section: type + "_title",
+          content: this.state.about_title
+        }
+      })
+        .then(res => {
+          console.log(res);
+        })
+        .catch(err => console.log(err));
+    }
+    if (this.state.about_textarea) {
+      axios({
+        method: "put",
+        url: "/api/updateText/" + type,
+        params: {
+          _id: this.state.about_textarea_id,
+          section: type + "_textarea",
+          content: this.state.about_textarea
+        }
+      })
+        .then(res => {
+          console.log(res);
+        })
+        .catch(err => console.log(err));
+    }
+  };
+
+  handleFormDelete = event => {
+    const type = event.target.dataset.section;
+    // debugger;
+    event.preventDefault();
+    // console.log(event);
+    axios.delete("/api/deleteText/" + type).then(response => {
+      console.log(response);
+      window.location.reload();
+    });
+  };
+
   render() {
     return (
       <div>

@@ -293,7 +293,7 @@ class AboutContent extends Component {
                       <button
                         type="button"
                         data-section="about"
-                        className="btn btn-primary btn-sm mr-2 ml-2 h-25 mt-5"
+                        className="btn btn-warning btn-sm mr-2 ml-2 h-25 mt-5"
                         disabled={
                           !(this.state.about_title && this.state.about_textarea)
                         }
