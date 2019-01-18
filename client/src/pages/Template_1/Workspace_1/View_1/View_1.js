@@ -21,7 +21,7 @@ class View_1 extends Component {
           contentUrl="/template_1/workspace_1/content_1"
           viewUrl="/template_1/workspace_1/view_1"
         />
-        <div className="mt-5">
+        <div className="mt-5"><br /> <br />
         <div>
                 <Temp1Nav 
                   AboutUrl="#About"

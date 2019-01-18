@@ -10,8 +10,7 @@ const app = express();
 
 //image upload to Amazon S3 Bucket
 const S3FS = require("s3fs");
-const s3fsImpl = new S3FS("cindytestbucket456", {
-  //TODO: CHANGE BUCKET NAME
+const s3fsImpl = new S3FS("animxproject", {
   accessKeyId: process.env.ACCESS_KEY_ID,
   secretAccessKey: process.env.SECRET_ACCESS_KEY,
   signatureVersion: "v4",
@@ -19,7 +18,7 @@ const s3fsImpl = new S3FS("cindytestbucket456", {
 });
 
 //create bucket and multiparty
-s3fsImpl.create();
+//s3fsImpl.create();
 const multiparty = require("connect-multiparty"),
   multipartyMiddleware = multiparty();
 app.use(multipartyMiddleware);
@@ -51,7 +50,7 @@ app.post("/api/uploadImage", function(req, res) {
       });
     });
   
-    file.section = req.query.section; // + "_title"; 
+    file.section = req.query.section; // (optional for populate reason to add -->) + "_title"; 
     file.headers = "image";
     //console.log(file);
   

@@ -47,16 +47,14 @@ class AboutContent extends Component {
       .catch(err => console.log(err));
 
     axios.get("/api/displayImage").then(response => {
-      //TODO: ADD LOGIC- if image has a section of "about", or "portfolio1", find it and display it
       var component = this;
       if (response) {
         response.data.forEach(function(elem, i) {
           if (elem.section === "temp1_about") {
-            //TODO: change bucket name
             component.setState({
               image_Id: elem._id,
               imageUrl:
-                "https://s3.amazonaws.com/cindytestbucket456/" + elem.name
+                "https://s3.us-east-2.amazonaws.com/animxproject/" + elem.name
             });
           }
         });
@@ -83,22 +81,21 @@ class AboutContent extends Component {
       data.append("myImage", image, image.name);
 
       // Make an AJAX upload request using Axios
-        return axios({
-          method: "POST",
-          url: "/api/uploadimage",
-          data: data,
-          params:{
-            section: "temp1_about"
-          }
-        })
+      return axios({
+        method: "POST",
+        url: "/api/uploadimage",
+        data: data,
+        params: {
+          section: "temp1_about"
+        }
+      })
         .then(response => {
           //console.log(response.data.err);
-          if(response.data.err) {
+          if (response.data.err) {
             this.setState({
               errMessage: response.data.err
             });
-
-          }else {
+          } else {
             window.location.reload();
           }
         })
@@ -116,12 +113,11 @@ class AboutContent extends Component {
 
   deleteImage = event => {
     event.preventDefault();
-    const type = event.target.dataset.section
+    const type = event.target.dataset.section;
     axios.delete("/api/deleteImage/" + type).then(response => {
       console.log(response);
       window.location.reload();
     });
-
   };
 
   handleInputChange = event => {
@@ -241,14 +237,19 @@ class AboutContent extends Component {
                 <div className="card w-75 ml-5 mt-0">
                   <div className="card-body">
                     <p>Profile Image</p>
-                    {this.state.errMessage ? <p className="text-danger">{this.state.errMessage}</p>:""}
+                    {this.state.errMessage ? (
+                      <p className="text-danger">{this.state.errMessage}</p>
+                    ) : (
+                      ""
+                    )}
                     {this.state.imageUrl ? (
                       <div>
                         <img
                           src={this.state.imageUrl}
-                          className="img-rounded img-responsive"
+                          className="responsive"
                           alt="not available"
                         />
+                        <br />
                         <button
                           className="btn btn-secondary btn-sm mr-2 ml-2 h-25 mt-3"
                           type="delete"
