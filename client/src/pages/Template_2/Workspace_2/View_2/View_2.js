@@ -6,6 +6,8 @@ import Nav2 from "./Nav2";
 import Foot2 from "./Foot2";
 import Portfolio2 from "./Portfolio2";
 import Contact2 from "./Contact2";
+import Rotate from 'react-reveal/Rotate';
+
 
 
 class View_2 extends Component {
@@ -21,13 +23,8 @@ class View_2 extends Component {
         />
 
         <div><Nav2 /></div>
-        <div><Temp23D /></div> 
-        <div><About2 /></div>
-        <div><Portfolio2 /></div>
-        <div div className="Contact2" style={{ display: 'flex', justifyContent: 'center', }}>
-        <Contact2 />
-        </div>
-        <div><Foot2 /></div>
+        <div><Rotate><Temp23D /></Rotate></div> 
+        <div className="foot2"><Foot2 /></div>
       </div>
     );
   }

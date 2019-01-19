@@ -21,11 +21,6 @@ class View_1 extends Component {
           contentUrl="/template_1/workspace_1/content_1"
           viewUrl="/template_1/workspace_1/view_1"
         />
-        <div className="jumbotron text-center">
-        <br /><br /><br />
-          This is the view page!!!!
-        </div>
-        <hr />
         <div className="mt-5">
         <div>
                 <Temp1Nav 
