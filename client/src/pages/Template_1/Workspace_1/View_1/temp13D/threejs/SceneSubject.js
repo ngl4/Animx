@@ -6,11 +6,11 @@ export default scene => {
 
     const subjectGeometry = deformGeometry(new THREE.IcosahedronGeometry(10, 2));
     
-    const subjectMaterial = new THREE.MeshStandardMaterial({ color: "#191919", transparent: true, side: THREE.DoubleSide, alphaTest: 0.5 });
+    const subjectMaterial = new THREE.MeshStandardMaterial({ color: "#000", transparent: true, side: THREE.DoubleSide, alphaTest: 0.5 });
     subjectMaterial.alphaMap = new THREE.TextureLoader().load(alphaTexture);
     subjectMaterial.alphaMap.magFilter = THREE.NearestFilter;
     subjectMaterial.alphaMap.wrapT = THREE.RepeatWrapping;
-    subjectMaterial.alphaMap.repeat.y = 15;
+    subjectMaterial.alphaMap.repeat.y = 10;
 
     const subjectMesh = new THREE.Mesh(subjectGeometry, subjectMaterial);
         
