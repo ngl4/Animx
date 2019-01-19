@@ -28,10 +28,10 @@
 } */
 
 .responsive-img {
-    width: 130%;
+    width: 100%;
     max-width: 550px;
     height: auto;
-    margin-right: 10rem;
+    margin-right: 6rem;
   }
 
 

@@ -2,6 +2,7 @@
     height: 20rem;
 }
 
-/* img {
-    height: 16rem;
-} */
+.card-img-top {
+    height: 18rem;
+    width: 14rem;
+}

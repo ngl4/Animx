@@ -30,11 +30,7 @@ class About extends Component {
               });
             }
           });
-        } else {
-          this.setState({
-            isAboutSubmit: false
-          });
-        }
+        } 
       })
       .catch(err => console.log(err));
 
@@ -61,7 +57,7 @@ class About extends Component {
             style={{ display: "flex", justifyContent: "center" }}
           >
             {this.state.imageUrl ? (
-              <div className="mr-5">
+              <div className="mr-3">
               <img
                 src={this.state.imageUrl}
                 className="responsive-img"

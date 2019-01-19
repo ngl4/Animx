@@ -1,12 +1,17 @@
-import React from "react";
+import React, { Component } from "react";
 import "./Temp1Foot.css";
+// import axios from "axios";
 
-const Temp1Foot = () => (
-  <footer className="container-fluid-foot">
-    <div className="container-txt">
-      <p>COPYRIGHT 2019 | YOUR NAME HERE</p>
-    </div>
-  </footer>
-);
+class Temp1Foot extends Component {
+  render() {
+    return (
+      <footer className="container-fluid-foot">
+        <div className="container-txt">
+          <p>COPYRIGHT 2019 | YOUR NAME HERE</p>
+        </div>
+      </footer>
+    );
+  }
+}
 
 export default Temp1Foot;

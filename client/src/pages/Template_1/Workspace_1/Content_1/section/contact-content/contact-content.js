@@ -108,22 +108,6 @@ class ContactContent extends Component {
         }
       })
       .catch(err => console.log(err));
-
-    // axios.get("/api/displayImage").then(response => {
-    //   //console.log(response);
-    //   //TODO: ADD LOGIC- if image has a section of "about", or "portfolio1", find it and display it
-    //   if (response.data.length === 0) {
-    //     this.setState({
-    //       imageUrl: ""
-    //     });
-    //   } else {
-    //     this.setState({ //TODO: change bucket name 
-    //       imageUrl:
-    //         "https://s3.amazonaws.com/cindytestbucket456/" +
-    //         response.data[0].name
-    //     });
-    //   }
-    // });
   }
 
   handleInputChange = event => {
