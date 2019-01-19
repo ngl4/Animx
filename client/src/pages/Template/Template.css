@@ -5,3 +5,11 @@
 img {
     height: 16rem;
 }
+
+h1 {
+    font-family: 'Major Mono Display', monospace;
+}
+
+#cardT {
+    font-family: 'Major Mono Display', monospace;
+}

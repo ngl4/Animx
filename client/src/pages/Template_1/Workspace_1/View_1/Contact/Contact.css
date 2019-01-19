@@ -1,14 +1,17 @@
 .contact-container {
-  margin-top: 1%;
-  width: 70%;
+  width: 100%;
   font-family: "Montserrat-Light";
   font-size: .8rem;
-  padding: 3%;
-  color: grey;
+  padding: 4%;
+  color: black;
+  margin-left: 20%;
+
 }
 
 .content {
+  margin-bottom: 8%;
   width: 70%;
+
 }
 
 #linkhover {
@@ -16,7 +19,8 @@
 }
 
 #email {
-  margin-top: 2.3%;
+  margin-top: 2%;
+  margin-bottom: 2%;
   font-size: .8rem;
   -webkit-animation:colorchange 20s infinite alternate;
 }
@@ -24,17 +28,12 @@
 #faicons {
   text-align: center;
   background-color: white;
-  margin-top: 0;
-}
-
-#faicons1 {
-background-color: white;
-/* margin-top: -4%; */
+  margin-right: 4%;
 }
 
 
 .fa-envelope, .fa-linkedin-in, .fa-github, .fa-twitter, .fa-instagram, .fa-facebook-square {
-  margin-top: -2.3%;
+
   font-size: 24px;
   width: 56px;
   height: 56px;

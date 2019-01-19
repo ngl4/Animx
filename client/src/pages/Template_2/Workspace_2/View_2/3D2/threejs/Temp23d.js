@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import threeEntryPoint from "./threejs/threeEntryPoint"
+import "./3D2.css";
 
 class Temp23D extends Component {
   state = {

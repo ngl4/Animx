@@ -33,7 +33,7 @@ export default canvas => {
         const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true }); 
         const DPR = window.devicePixelRatio ? window.devicePixelRatio : 1;
         renderer.setPixelRatio(DPR);
-        renderer.setSize(400, 400);
+        renderer.setSize(500, 500);
 
         renderer.gammaInput = true;
         renderer.gammaOutput = true; 
@@ -44,8 +44,8 @@ export default canvas => {
     function buildCamera({ width, height }) {
         const aspectRatio = width / height;
         const fieldOfView = 60;
-        const nearPlane = 4;
-        const farPlane = 100; 
+        const nearPlane = 2;
+        const farPlane = 90; 
         const camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
 
         camera.position.z = 40;

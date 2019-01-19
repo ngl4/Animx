@@ -46,7 +46,7 @@ export default canvas => {
         const aspectRatio = width / height;
         const fieldOfView = 6;
         const nearPlane = 4;
-        const farPlane = 100; 
+        const farPlane = 90; 
         const camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
 
         camera.position.z = 15;
