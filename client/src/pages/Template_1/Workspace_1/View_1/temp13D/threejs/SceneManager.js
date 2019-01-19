@@ -43,8 +43,8 @@ export default canvas => {
 
     function buildCamera({ width, height }) {
         const aspectRatio = width / height;
-        const fieldOfView = 30;
-        const nearPlane = 4;
+        const fieldOfView = 60;
+        const nearPlane = 2;
         const farPlane = 90; 
         const camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
 

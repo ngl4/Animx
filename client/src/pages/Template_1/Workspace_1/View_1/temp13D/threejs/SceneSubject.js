@@ -4,9 +4,9 @@ import alphaTexture from '../../assets/textures/gradient-2.jpg';
 export default scene => {    
     const group = new THREE.Group();
 
-    const subjectGeometry = deformGeometry(new THREE.IcosahedronGeometry(10, 2));
+    const subjectGeometry = deformGeometry(new THREE.IcosahedronGeometry(10, 3));
     
-    const subjectMaterial = new THREE.MeshStandardMaterial({ color: "#000", transparent: true, side: THREE.DoubleSide, alphaTest: 0.5 });
+    const subjectMaterial = new THREE.MeshStandardMaterial({ color: "#adadad", transparent: true, side: THREE.DoubleSide, alphaTest: 0.5 });
     subjectMaterial.alphaMap = new THREE.TextureLoader().load(alphaTexture);
     subjectMaterial.alphaMap.magFilter = THREE.NearestFilter;
     subjectMaterial.alphaMap.wrapT = THREE.RepeatWrapping;

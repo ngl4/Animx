@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import TemplateNav from "../../components/TemplateNav";
 import "./Template.css";
+import pic1 from "./images/ss1.png";
+import pic2 from "./images/ss2.png";
+
 
 class Template extends Component {
   state = {};
@@ -21,11 +24,12 @@ class Template extends Component {
                 <a href="/template_1/workspace" alt="template_1">
                   <img
                     className="card-img-top"
-                    src="./images/templates.png"
+                    src={pic1}
                     alt="Cardcap 1"
                   />
                   <div className="card-body">
-                    <p className="card-text">Template 1</p>
+                    <p className="card-text">Template 1 | "In Color"</p>
+                    
                   </div>
                 </a>
               </div>
@@ -35,21 +39,15 @@ class Template extends Component {
               <a href="/template_2/workspace_2" alt="template_2">
                   <img
                     className="card-img-top"
-                    src="./images/templates.png"
+                    src={pic2}
                     alt="Cardcap 1"
                   />
                 <div className="card-body">
-                  <p className="card-text">Template 2</p>
+                  <p className="card-text">Template 2 | "Black + White"</p>
                 </div>
                 </a>
               </div>
 
-              <div className="card card-size col-md-3 m-2">
-                <img className="card-img-top" src="" alt="Cardcap 3" />
-                <div className="card-body">
-                  <p className="card-text">Template 3</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
