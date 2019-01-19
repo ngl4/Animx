@@ -25,7 +25,8 @@ const multiparty = require("connect-multiparty"),
 app.use(multipartyMiddleware);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/animxDB");
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/animxDB";
+mongoose.connect(MONGODB_URI);
 const db = require("./models");
 
 

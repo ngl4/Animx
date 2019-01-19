@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import "./Nav2.css";
-import About2 from "../About2"
-import Portfolio2 from "../Portfolio2";
-import Contact2 from "../Contact2";
-
+//import About2 from "../About2";
+//import Portfolio2 from "../Portfolio2";
+// import Contact2 from "../
 
 class Menu extends Component {
   render() {

@@ -11,10 +11,10 @@ import pic6 from "./images/six.jpg";
 import Zoom from 'react-reveal/Zoom';
 
 
-const images = [pic1, pic2, pic3, pic4, pic5, pic6];
-class Portfolio2 extends Component {
-    render() {
-        return (
+//const images = [pic1, pic2, pic3, pic4, pic5, pic6];
+const Portfolio2 = props => {
+    return (
+        <div className="gallery">
 
             <Zoom Cascade>
             <Nav2 />
@@ -72,9 +72,8 @@ class Portfolio2 extends Component {
 
         </div>
     </Zoom>
-
+    </div>
     )
-}
 };
 
 export default Portfolio2;

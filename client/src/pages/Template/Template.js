@@ -28,7 +28,7 @@ class Template extends Component {
                     alt="Cardcap 1"
                   />
                   <div className="card-body">
-                    <p className="card-text">Template 1 | "In Color"</p>
+                    <p className="card-text" id="cardT">Template 1 | "In Color"</p>
                     
                   </div>
                 </a>
