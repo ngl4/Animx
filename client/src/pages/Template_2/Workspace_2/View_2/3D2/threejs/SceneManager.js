@@ -34,7 +34,7 @@ export default canvas => {
         const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true }); 
         const DPR = window.devicePixelRatio ? window.devicePixelRatio : 1;
         renderer.setPixelRatio(DPR);
-        renderer.setSize(400, 400);
+        renderer.setSize(500, 500);
 
         renderer.gammaInput = true;
         renderer.gammaOutput = true; 

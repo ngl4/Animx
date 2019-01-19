@@ -19,25 +19,25 @@ class Menu extends Component {
             <div className="row" id="row1">
               <div class="col-sm-3">
                 <a href="/template_2/workspace_2/view_2/about_2" class="linksList">
-                  <h2 class="navtwo">ABOUT</h2>
+                  <h5 class="navtwo">ABOUT</h5>
                 </a>
               </div>
 
               <div class="col-sm-3">
                 <a href="/template_2/workspace_2/view_2/portfolio_2" class="linksList">
-                  <h2 class="navtwo">WORKS</h2>
+                  <h5 class="navtwo">WORKS</h5>
                 </a>
               </div>
             
               <div class="col-sm-3">
                 <a href="/template_2/workspace_2/view_2/contact_2" class="linksList">
-                  <h2 class="navtwo">CONTACT</h2>
+                  <h5 class="navtwo">CONTACT</h5>
                 </a>
                 </div>
 
                 <div class="col-sm-3">
                 <a href="/template_2/workspace_2/view_2" class="linksList">
-                  <h2 class="navtwo"><i class="fas fa-home"></i></h2>
+                  <h5 class="navtwo"><i class="fas fa-home"></i></h5>
                 </a>
                 </div>
           
