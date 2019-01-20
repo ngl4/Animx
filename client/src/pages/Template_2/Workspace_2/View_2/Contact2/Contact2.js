@@ -1,16 +1,20 @@
 import React, { Component } from "react";
 import "./Contact2.css";
-import Zoom from 'react-reveal/Zoom';
+import Flip from 'react-reveal/Flip';
+import Fade from 'react-reveal/Fade';
+import Nav2 from "../Nav2";
 
 class Contact2 extends Component {
 
     render() {
         return (
 
+            <Flip left cascade>
+            <Nav2 />
+       
 
             <div className="contact-container-two">
-                <Zoom Cascade Up>
-
+             
             <p class="contentArch">
                 CONTACT ME:
             </p>
@@ -35,30 +39,31 @@ class Contact2 extends Component {
 
                     <div className="row" id="contactFA">
 
-                        <div class="col-sm-1">
+                        <div class="col-sm-2">
                             <i class="fab fa-linkedin-in" id="font"></i>
                         </div>
 
-                        <div class="col-sm-1">
+                        <div class="col-sm-2">
                             <i class="fab fa-github" id="font"></i>
                         </div>
 
-                        <div class="col-sm-1">
+                        <div class="col-sm-2">
                             <i class="fab fa-twitter" id="font"></i>
                         </div>
 
-                        <div class="col-sm-1">
+                        <div class="col-sm-2">
                             <i class="fab fa-instagram" id="font"></i>
                         </div>
 
-                        <div class="col-sm-1">
+                        <div class="col-sm-2">
                             <i class="fab fa-facebook-square" id="font"></i>
                         </div>
                     </div>
                     </div>
 
-                </Zoom>
+            
             </div>
+            </Flip>
         );
     }
 }

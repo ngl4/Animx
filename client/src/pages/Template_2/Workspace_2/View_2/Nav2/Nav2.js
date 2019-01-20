@@ -6,32 +6,29 @@ import ReactDOM from 'react-dom';
 import Menu from "./menu";
 import Header from "./header";
 import "./Nav2.css";
-    
-    class Nav2 extends Component {
-      constructor(props) {
-        super(props);
-        this.state = { showMenu: true };
-        this.toggleMenu = this.toggleMenu.bind(this);
-    
-      }
-    
-      toggleMenu = function() {
-        this.setState({ showMenu: !this.state.showMenu });
-      }
 
-      
-    
-      render() {
-        return (
-          <div className="Nav2">
-            {/* <Temp23D toggleMenu={this.toggleMenu}/>
-            <About2 showMenu={this.state.showMenu}/> */}
-                    <Header toggleMenu={this.toggleMenu}/>
-            <Menu showMenu={this.state.showMenu}/>
-          </div>
-        );
-      }
-    }
+class Nav2 extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { showMenu: false };
+    this.toggleMenu = this.toggleMenu.bind(this);
+
+  }
+
+  toggleMenu = function () {
+    this.setState({ showMenu: !this.state.showMenu });
+  }
+
+
+  render() {
+    return (
+      <div className="Nav2">
+        <Header toggleMenu={this.toggleMenu} />
+        <Menu showMenu={this.state.showMenu} />
+      </div>
+    );
+  }
+}
 
 
 export default Nav2;

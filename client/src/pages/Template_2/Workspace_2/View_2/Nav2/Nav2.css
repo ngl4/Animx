@@ -5,7 +5,7 @@
     text-align: right;
     border-style: none;
     border: none;
-    margin-top: 10%;
+    margin-top: 5%;
     font-family: 'Noto Serif', serif;
 }
 
@@ -21,8 +21,10 @@
     font-size: 1.5rem;
     text-align: center;
     margin-top: -2%;
+}
 
-
+.linksList {
+    font-family: "Noto Serif", serif;
 }
 
 

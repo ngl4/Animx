@@ -1,5 +1,6 @@
 import * as THREE from 'three'
 import alphaTexture from '../images/bldg.jpg';
+import "./3D2.css";
 // import 
 
 export default scene => {    

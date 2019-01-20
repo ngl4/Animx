@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import "./Contact.css";
 import Zoom from "react-reveal/Zoom";
@@ -190,4 +191,8 @@ class Contact extends Component {
   }
 }
 
+<<<<<<< HEAD
 export default Contact;
+=======
+export default Contact;
+>>>>>>> master
