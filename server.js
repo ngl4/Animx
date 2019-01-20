@@ -75,9 +75,12 @@ app.get("/user_data", function(req, res) {
   else {
     // Otherwise send back the user's username and id
     // Sending back a password, even a hashed password, isn't a good idea
+    console.log(req.user.templates);
+
     res.json({
       username: req.user.username,
       user_id: req.user._id,
+      user_templates: req.user.templates,
       loggedIn: true
     });
   }
@@ -92,6 +95,28 @@ app.get("/allusers", function(req, res) {
     .then(dbModel => res.json(dbModel))
     .catch(err => res.status(422).json(err));
 })
+
+app.post("/api/addTemplate", function(req, res){ 
+
+  console.log("Add a new template to the DB");
+  console.log(req.body);
+
+  if(req.user){
+
+  db.Template.create(req.body)
+  .then(function(dbTemplate) { //find a specific user to update its template DB
+    return db.User.findOneAndUpdate({_id: req.user._id}, { $push: { templates: dbTemplate._id } }, { new: true });
+  }).then(function(dbUser){
+    res.json(dbUser);
+  }).catch(function(err){
+    res.json(err);
+  });
+}else {
+  res.json({
+    err: "You are not logged in!"
+  })
+}
+});
 
 
 //Image Upload: Amazon Post route

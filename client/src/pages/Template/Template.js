@@ -5,8 +5,11 @@ import axios from "axios";
 
 class Template extends Component {
   state = {
-    template1: "template1",
-    user_id: ""
+    // template1: "template1",
+    // template2: "template2",
+    template:"",
+    user_id: "",
+    user_templates: []
 
   };
 
@@ -16,7 +19,8 @@ class Template extends Component {
       console.log(response);
       if(response.data.loggedIn){
         this.setState({
-          user_id: response.data.user_id
+          user_id: response.data.user_id,
+          user_templates: response.data.user_templates
         })
       }else {
         console.log("no login user stored in session!");
@@ -32,22 +36,32 @@ class Template extends Component {
     });
   };
 
-  handleChooseTemplate = event => {
+  selectTemplate = event => {
     event.preventDefault();
+    console.log(event.target.value);
 
-    // axios.get("/")
+    console.log(this.state.user_templates);
 
-    // if (this.state.template1) {
-    //   axios.post("/chooseTemplate", {
-    //     type: template1,
-        
 
-    //   })
-    // }
+    this.setState({
+      template: event.target.value
+    });
+  }
 
-    
+  handleAddTemplate = event => {
+    event.preventDefault();
+    //console.log(this.state.user_templates);
+    if (this.state.user_templates.length === 0) {
+       axios.post("/api/addTemplate", {
+      type: this.state.template
+    }).then(response => {
+      console.log(response);
+    }).catch(err => 
+      console.log(err));
 
-    axios.post("/user_data")
+    }else {
+      console.log("You have chosen this Template already!")
+    }
   }
 
   render() {
@@ -75,9 +89,9 @@ class Template extends Component {
                         <input
                           class="form-check-input"
                           type="checkbox"
-                          value={this.state.template1}
-                          name={this.state.template1}
-                          onChange={this.handleInputChange}
+                          value="template1"
+                          name="template1"
+                          onChange={this.selectTemplate}
                           id="defaultCheck1"
                         />
                         <label class="form-check-label" for="defaultCheck1">
@@ -111,7 +125,7 @@ class Template extends Component {
             </div>
             <div className="text-center">
 
-              <button onClick={this.handleChooseTemplate}>Next</button>
+              <button onClick={this.handleAddTemplate}>Next</button>
 
             </div>
           </div>

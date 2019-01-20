@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
+import Login from "./pages/Login";
 import Content_1 from "./pages/Template_1/Workspace_1/Content_1";
 import View_1 from "./pages/Template_1/Workspace_1/View_1";
 import NoMatch from "./pages/NoMatch";
@@ -16,6 +17,7 @@ const App = () => (
     <div>
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/login" component={Login} />
         <Route exact path="/template" component={Template} />
         <Route exact path="/template_1/workspace" component={Template_1} />
         <Route exact path="/template_1/workspace_1/content_1" component={Content_1} />
