@@ -5,7 +5,6 @@ import axios from "axios";
 
 class PortfolioContent extends Component {
   //TODO#1: ADD URL LINK TO THE PROJECT (OPTIONAL!!!)
-  //TODO#2: ADD COPYRIGHT "YOUR NAME HERE" AS A NEW FOLDER 
   
   state = {
     portfolio1_title: "",

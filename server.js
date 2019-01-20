@@ -1,12 +1,20 @@
 const mongoose = require("mongoose");
 const express = require("express");
+const session = require("express-session");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const fs = require("fs");
 require("dotenv").config();
 
+// Requiring passport as we've configured it
+var passport = require("./config/passport");
+
 //Init express app
 const app = express();
+
+// middleware for parsing body on post request
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 //image upload to Amazon S3 Bucket
 const S3FS = require("s3fs");
@@ -27,6 +35,41 @@ app.use(multipartyMiddleware);
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/animxDB";
 mongoose.connect(MONGODB_URI);
 const db = require("./models");
+
+// Setup passport
+app.use(session({ secret: "secret", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.post("/login", passport.authenticate("local"), function(req, res) {
+  res.json({loggedIn: true,
+            message: "WOOOO IT WORKED",
+            username: req.user.username });
+});
+
+app.get('/logout', function(req, res){
+  req.logout();
+  res.json({
+    loggedIn: false,
+    username: ""
+  });
+});
+
+app.get("/user_data", function(req, res) {
+  if (!req.user) {
+    // The user is not logged in, send back an empty object
+    res.json({ loggedIn: false});
+  }
+  else {
+    res.json({
+      username: req.user.username,
+      user_id: req.user._id,
+      loggedIn: true
+    });
+  }
+});
+
+
 
 
 //Image Upload: Amazon Post route
@@ -119,6 +162,8 @@ app.delete("/api/deleteText/:type", function(req, res) {
       type + "_twitter",
       type + "_instagram",
       type + "_facebook",
+      type + "_name",
+      type + "_year"
     ]
   })
     .then(dbModel => console.log(dbModel))

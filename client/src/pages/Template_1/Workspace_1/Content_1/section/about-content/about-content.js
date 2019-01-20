@@ -226,8 +226,6 @@ class AboutContent extends Component {
     return (
       <div>
         {/* A card contains props for about-image, about-title, about-textarea */}
-
-        <div className="row col-lg-12" />
         <div className="card">
           <div className="card-body">
             <h3 className="card-title">About</h3>

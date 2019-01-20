@@ -15,5 +15,12 @@
     color: #F5CBA7;
     font-family: 'Major Mono Display', monospace;
     font-size: 13px;
+}
+
+.menu-opacity {
+    opacity: 0.9;
+    border: .5px solid white;
+    background-color: #34495E;  
+    color:  #F7DC6F;
 
 }

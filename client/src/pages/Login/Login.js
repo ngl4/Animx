@@ -125,7 +125,7 @@ class Login extends Component {
                 ""
               ) : (
                 // <button onClick={this.handlelogout}> Logout Here </button>
-                <button onClick={this.handlelogin} className="bg-warning text-secondary"> Login </button>
+                <button onClick={this.handlelogin} className="bg-warning text-secondary pl-2 pr-2"> Sign In </button>
               )}
             </div>
           </div>

@@ -2,3 +2,22 @@
     height: 300px;
     width: 400px;
 } */
+
+.content-color{
+    color: #34495E;
+    opacity: 0.9;
+}
+
+.content-icon-font {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9em;
+}
+
+.content-border-bot:hover {
+    border-bottom: 1.5px solid rgb(237, 200, 50);
+}
+
+.hr-position {
+    position: relative;
+    top: -0.15em;
+}
