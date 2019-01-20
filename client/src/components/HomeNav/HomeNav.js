@@ -17,10 +17,13 @@ class HomeNav extends Component {
           <div className="animx-color animx-font mr-5"><strong></strong></div>
 
           <div  className="d-flex">
-           <div className="pt-2 pr-2 animx-login">login</div>
-           <div className="pt-2 pr-2 animx-login">|</div>
+           <div className="pt-2 pr-2 animx-login">
+           <a href="/login" className="animx-login">login</a>
+           
+           </div>
+           {/* <div className="pt-2 pr-2 animx-login">|</div>
            <div className="pt-2 pl-1 animx-login"> sign up</div>
-            
+             */}
           </div>  
         </div>
       </nav>

@@ -91,13 +91,14 @@ class Contact extends Component {
   render() {
     return (
       <div className="contact-container">
-        <Zoom Cascade Up>
-          <h6>
+  
+        <Zoom >
+        <h6 className="contact-color">
             {this.state.contact_title
               ? this.state.contact_title
               : "CONTACT ME:"}
           </h6>
-          <div class="content">
+          <div className="content contact-color">
             {this.state.contact_textarea
               ? this.state.contact_textarea
               : "Ipsum nunc aliquet bibendum enim. Ullamcorper malesuada proin libero nunc consequat interdum varius sit amet. Vitae congue mauris rhoncus aenean."}
