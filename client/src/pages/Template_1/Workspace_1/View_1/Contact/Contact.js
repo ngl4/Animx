@@ -191,8 +191,4 @@ class Contact extends Component {
   }
 }
 
-<<<<<<< HEAD
 export default Contact;
-=======
-export default Contact;
->>>>>>> master
