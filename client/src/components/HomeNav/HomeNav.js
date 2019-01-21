@@ -45,7 +45,7 @@ class HomeNav extends Component {
 
   render() {
     return (
-      <nav className="p-3 fixed-top">
+      <nav className="p-3 fixed-top nav-home-background">
         <div className="container d-flex justify-content-between text-white font-weight-bold">
         <div className="d-flex">
             <div className="pt-3 pr-3 animx-subtitle"></div>
