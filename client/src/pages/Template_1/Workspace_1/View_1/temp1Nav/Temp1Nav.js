@@ -14,7 +14,7 @@ class Temp1Nav extends Component {
            <Fade cascade>
         <div className="d-flex justify-content-center">
         <div class="navContent">
-        <button type="button" class="btn btn-light" id="abtBtn"><a href={this.props.AboutUrl}>ABOUT</a></button>
+        <button type="button" class="btn btn-light" id="aboutButn"><a href={this.props.AboutUrl}>ABOUT</a></button>
         <button type="button" class="btn btn-light" id="portBtn"><a href={this.props.PortfolioUrl}>PORTFOLIO</a></button>
         <button type="button" class="btn btn-light" id="ctcBtn"><a href={this.props.ContactUrl}>CONTACT</a></button>
         </div>
