@@ -2,14 +2,15 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Template from "./pages/Template";
+import NoMatch from "./pages/NoMatch";
+import Template_1 from "./pages/Template_1/Workspace_1";
 import Content_1 from "./pages/Template_1/Workspace_1/Content_1";
 import View_1 from "./pages/Template_1/Workspace_1/View_1";
-import NoMatch from "./pages/NoMatch";
-import Template from "./pages/Template";
-import Template_1 from "./pages/Template_1/Workspace_1";
+import Template_2 from "./pages/Template_2/Workspace_2";
 import Content_2 from "./pages/Template_2/Workspace_2/Content_2";
 import View_2 from "./pages/Template_2/Workspace_2/View_2";
-import Template_2 from "./pages/Template_2/Workspace_2";
 import About2 from "./pages/Template_2/Workspace_2/View_2/About2";
 import Portfolio2 from "./pages/Template_2/Workspace_2/View_2/Portfolio2";
 import Contact2 from "./pages/Template_2/Workspace_2/View_2/Contact2";
@@ -20,6 +21,7 @@ const App = () => (
     <div>
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/login" component={Login} />
         <Route exact path="/template" component={Template} />
         <Route exact path="/template_1/workspace" component={Template_1} />
         <Route exact path="/template_1/workspace_1/content_1" component={Content_1} />

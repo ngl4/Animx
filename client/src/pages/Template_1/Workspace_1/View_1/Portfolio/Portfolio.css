@@ -12,6 +12,15 @@
   padding-bottom: 3%;
 }
 
+.responsive-portfolio-img {
+  width: 55%;
+  max-width: 550px;
+  height: 200px;
+  margin-bottom: 1.30rem;
+
+}
+
+
 
 a.projects{ color:gray; } 
 a.projects:visited{ color: gray } 

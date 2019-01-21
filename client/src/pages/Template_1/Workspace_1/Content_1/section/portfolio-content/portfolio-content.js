@@ -4,47 +4,68 @@ import PortfolioContentCard from "./portfolioContentCard";
 import axios from "axios";
 
 class PortfolioContent extends Component {
+  //TODO#1: ADD URL LINK TO THE PROJECT (OPTIONAL!!!)
+  
   state = {
     portfolio1_title: "",
     portfolio1_title_id: "",
     portfolio1_textarea: "",
     portfolio1_textarea_id: "",
+
     portfolio2_title: "",
     portfolio2_title_id: "",
     portfolio2_textarea: "",
     portfolio2_textarea_id: "",
+
     portfolio3_title: "",
     portfolio3_title_id: "",
     portfolio3_textarea: "",
     portfolio3_textarea_id: "",
+
     portfolio4_title: "",
     portfolio4_title_id: "",
     portfolio4_textarea: "",
     portfolio4_textarea_id: "",
+
     portfolio5_title: "",
     portfolio5_title_id: "",
     portfolio5_textarea: "",
     portfolio5_textarea_id: "",
+
     portfolio6_title: "",
     portfolio6_title_id: "",
     portfolio6_textarea: "",
     portfolio6_textarea_id: "",
-    uploadMessage: "",
+
     errMessage: "",
+
     images: [],
+    image1_id:"",
+    image2_id:"",
+    image3_id:"",
+    image4_id:"",
+    image5_id:"",
+    image6_id:"",
+
+    imageUrl1:"",
+    imageUrl2:"",
+    imageUrl3:"",
+    imageUrl4:"",
+    imageUrl5:"",
+    imageUrl6:"",
+
     isPortfolio1Submit: false,
     isPortfolio2Submit: false,
     isPortfolio3Submit: false,
     isPortfolio4Submit: false,
     isPortfolio5Submit: false,
-    isPortfolio6Submit: false
+    isPortfolio6Submit: false,
   };
 
   componentDidMount() {
     axios
       .get("/api/displayText")
       .then(res => {
-        console.log(res);
         //adding this component variable, we can then access the "this" keyword/object 
         var component = this;
         if (res) {
@@ -178,22 +199,118 @@ class PortfolioContent extends Component {
       })
       .catch(err => console.log(err));
 
-    // axios.get("/api/displayImage").then(response => {
-    //   //console.log(response);
-    //   //TODO: ADD LOGIC- if image has a section of "about", or "portfolio1", find it and display it
-    //   if (response.data.length === 0) {
-    //     this.setState({
-    //       imageUrl: ""
-    //     });
-    //   } else {
-    //     this.setState({ //TODO: change bucket name 
-    //       imageUrl:
-    //         "https://s3.amazonaws.com/cindytestbucket456/" +
-    //         response.data[0].name
-    //     });
-    //   }
-    // });
+      axios.get("/api/displayImage").then(response => {
+        var component = this;
+        console.log(response);
+        if (response) {
+          console.log(response);
+          response.data.forEach(function(elem, i) {
+            if (elem.section === "temp1_portfolio1") {
+              component.setState({
+                image1_Id: elem._id,
+                imageUrl1:
+                  "https://s3.us-east-2.amazonaws.com/animxproject/" + elem.name
+              });
+            }
+            if (elem.section === "temp1_portfolio2") {
+              component.setState({
+                image2_Id: elem._id,
+                imageUrl2:
+                  "https://s3.us-east-2.amazonaws.com/animxproject/" + elem.name
+              });
+            }
+            if (elem.section === "temp1_portfolio3") {
+              component.setState({
+                image3_Id: elem._id,
+                imageUrl3:
+                  "https://s3.us-east-2.amazonaws.com/animxproject/" + elem.name
+              });
+            }
+            if (elem.section === "temp1_portfolio4") {
+              component.setState({
+                image4_Id: elem._id,
+                imageUrl4:
+                  "https://s3.us-east-2.amazonaws.com/animxproject/" + elem.name
+              });
+            }
+            if (elem.section === "temp1_portfolio5") {
+              component.setState({
+                image5_Id: elem._id,
+                imageUrl5:
+                  "https://s3.us-east-2.amazonaws.com/animxproject/" + elem.name
+              });
+            }
+            if (elem.section === "temp1_portfolio6") {
+              component.setState({
+                image6_Id: elem._id,
+                imageUrl6:
+                  "https://s3.us-east-2.amazonaws.com/animxproject/" + elem.name
+              });
+            }
+          });
+        }
+      });
   }
+
+  selectImages = event => {
+    let images = [];
+    for (var i = 0; i < event.target.files.length; i++) {
+      images[i] = event.target.files.item(i);
+    }
+    images = images.filter(image => image.name.match(/\.(jpg|jpeg|png|gif)$/));
+
+    this.setState({
+      images: images
+    });
+  };
+
+  uploadImage = event => {
+    event.preventDefault();
+    const type = event.target.dataset.section;
+    console.log(type);
+    const uploaders = this.state.images.map(image => {
+      const data = new FormData();
+      data.append("myImage", image, image.name);
+
+      // Make an AJAX upload request using Axios
+      return axios({
+        method: "POST",
+        url: "/api/uploadimage",
+        data: data,
+        params: {
+          section: type
+        }
+      })
+        .then(response => {
+          //console.log(response.data.err);
+          if (response.data.err) {
+            this.setState({
+              errMessage: response.data.err
+            });
+          } else {
+            window.location.reload();
+          }
+        })
+        .catch(err => console.log(err));
+    });
+
+    // Once all the files are uploaded
+    axios
+      .all(uploaders)
+      .then(() => {
+        console.log("done");
+      })
+      .catch(err => alert(err.message + " and each upload file limit is 2mb"));
+  };
+
+  deleteImage = event => {
+    event.preventDefault();
+    const type = event.target.dataset.section;
+    axios.delete("/api/deleteImage/" + type).then(response => {
+      console.log(response);
+      window.location.reload();
+    });
+  };
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -635,6 +752,11 @@ class PortfolioContent extends Component {
             <hr />
             <PortfolioContentCard
               numOfPortfolio="1"
+              errMessage = {this.state.errMessage}
+              imageUrl = {this.state.imageUrl1}
+              selectImages={this.selectImages}
+              uploadImage={this.uploadImage}
+              deleteImage={this.deleteImage}
               portfolio_title={this.state.portfolio1_title}
               portfolio_textarea={this.state.portfolio1_textarea}
               handleInputChange={this.handleInputChange}
@@ -642,9 +764,15 @@ class PortfolioContent extends Component {
               handleFormEdit={this.handleFormEdit}
               handleFormDelete={this.handleFormDelete}
               isPortfolioSubmit={this.state.isPortfolio1Submit}
+              data_section="temp1_portfolio1"
             />
             <PortfolioContentCard
               numOfPortfolio="2"
+              errMessage = {this.state.errMessage}
+              imageUrl = {this.state.imageUrl2}
+              selectImages={this.selectImages}
+              uploadImage={this.uploadImage}
+              deleteImage={this.deleteImage}
               portfolio_title={this.state.portfolio2_title}
               portfolio_textarea={this.state.portfolio2_textarea}
               handleInputChange={this.handleInputChange}
@@ -652,9 +780,15 @@ class PortfolioContent extends Component {
               handleFormEdit={this.handleFormEdit}
               handleFormDelete={this.handleFormDelete}
               isPortfolioSubmit={this.state.isPortfolio2Submit}
+              data_section="temp1_portfolio2"
             />
             <PortfolioContentCard
               numOfPortfolio="3"
+              errMessage = {this.state.errMessage}
+              imageUrl = {this.state.imageUrl3}
+              selectImages={this.selectImages}
+              uploadImage={this.uploadImage}
+              deleteImage={this.deleteImage}
               portfolio_title={this.state.portfolio3_title}
               portfolio_textarea={this.state.portfolio3_textarea}
               handleInputChange={this.handleInputChange}
@@ -662,9 +796,15 @@ class PortfolioContent extends Component {
               handleFormEdit={this.handleFormEdit}
               handleFormDelete={this.handleFormDelete}
               isPortfolioSubmit={this.state.isPortfolio3Submit}
+              data_section="temp1_portfolio3"
             />
             <PortfolioContentCard
               numOfPortfolio="4"
+              errMessage = {this.state.errMessage}
+              imageUrl = {this.state.imageUrl4}
+              selectImages={this.selectImages}
+              uploadImage={this.uploadImage}
+              deleteImage={this.deleteImage}
               portfolio_title={this.state.portfolio4_title}
               portfolio_textarea={this.state.portfolio4_textarea}
               handleInputChange={this.handleInputChange}
@@ -672,9 +812,15 @@ class PortfolioContent extends Component {
               handleFormEdit={this.handleFormEdit}
               handleFormDelete={this.handleFormDelete}
               isPortfolioSubmit={this.state.isPortfolio4Submit}
+              data_section="temp1_portfolio4"
             />
             <PortfolioContentCard
               numOfPortfolio="5"
+              errMessage = {this.state.errMessage}
+              imageUrl = {this.state.imageUrl5}
+              selectImages={this.selectImages}
+              uploadImage={this.uploadImage}
+              deleteImage={this.deleteImage}
               portfolio_title={this.state.portfolio5_title}
               portfolio_textarea={this.state.portfolio5_textarea}
               handleInputChange={this.handleInputChange}
@@ -682,9 +828,15 @@ class PortfolioContent extends Component {
               handleFormEdit={this.handleFormEdit}
               handleFormDelete={this.handleFormDelete}
               isPortfolioSubmit={this.state.isPortfolio5Submit}
+              data_section="temp1_portfolio5"
             />
             <PortfolioContentCard
               numOfPortfolio="6"
+              errMessage = {this.state.errMessage}
+              imageUrl = {this.state.imageUrl6}
+              selectImages={this.selectImages}
+              uploadImage={this.uploadImage}
+              deleteImage={this.deleteImage}
               portfolio_title={this.state.portfolio6_title}
               portfolio_textarea={this.state.portfolio6_textarea}
               handleInputChange={this.handleInputChange}
@@ -692,6 +844,7 @@ class PortfolioContent extends Component {
               handleFormEdit={this.handleFormEdit}
               handleFormDelete={this.handleFormDelete}
               isPortfolioSubmit={this.state.isPortfolio6Submit}
+              data_section="temp1_portfolio6"
             />
           </div>
         </div>

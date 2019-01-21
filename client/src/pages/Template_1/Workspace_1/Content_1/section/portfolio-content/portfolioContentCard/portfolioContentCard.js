@@ -7,39 +7,66 @@ class PortfolioContentCard extends Component {
         <div className="row card-text">
           <div className="col-md-5 p-0 d-flex justify-content-end">
             <div className="card w-75 ml-5">
-              <div className="card-body">
-                <form>
-                <h5 className="text-left mb-5"><u>Portfolio #{this.props.numOfPortfolio}</u></h5>
+              <div className="card-body mt-0">
+              <h5 className="text-left mb-5"><u>Portfolio #{this.props.numOfPortfolio}</u></h5>
                 <p>Project Image</p>
-
-                  <div className="custom-file">
-                    <input
-                      type="file"
-                      className="custom-file-input"
-                      id="customFile"
-                      name="myImage"
-                      onChange={this.props.selectImages}
-                      multiple
-                    />
-                    <label className="custom-file-label" htmlFor="customFile">
-                      Choose file
-                    </label>
-                  </div>
-                  <button
-                    className="btn btn-warning btn-sm mt-3"
-                    type="submit"
-                    onClick={this.props.uploadImage}
-                  >
-                    Upload
-                  </button>
-                </form>
+                {this.props.errMessage ? (
+                      <p className="text-danger">{this.props.errMessage}</p>
+                    ) : (
+                      ""
+                    )}
+                    {this.props.imageUrl ? (
+                      <div>
+                        <img
+                          src={this.props.imageUrl}
+                          className="responsive"
+                          alt="not available"
+                        />
+                        <br />
+                        <button
+                          className="btn btn-secondary btn-sm mr-2 ml-2 h-25 mt-3"
+                          type="delete"
+                          data-section={this.props.data_section}
+                          onClick={this.props.deleteImage}
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    ) : (
+                      <form>
+                        <div className="custom-file">
+                          <input
+                            type="file"
+                            className="custom-file-input"
+                            id="customFile"
+                            name="myImage"
+                            onChange={this.props.selectImages}
+                            multiple
+                          />
+                          <label
+                            className="custom-file-label"
+                            htmlFor="customFile"
+                          >
+                            Choose file
+                          </label>
+                        </div>
+                        <button
+                          className="btn btn-warning btn-sm mt-3"
+                          type="submit"
+                          data-section={this.props.data_section}
+                          onClick={this.props.uploadImage}
+                        >
+                          Upload
+                        </button>
+                      </form>
+                    )}
               </div>
             </div>
           </div>
           <div className="col-md-6 p-0">
             <form className="mt-5">
-              <div className="form-group">
-                <label for="portfolioFormControlInput1" className="ml-0">
+              <div className="form-group mt-5">
+                <label for="portfolioFormControlInput1" className="ml-0 mt-5">
                   Title
                 </label>
                 <div className="d-flex justify-content-center">

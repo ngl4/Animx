@@ -22,4 +22,16 @@
     margin-right: 3%;
 }
 
+/* img {
+    width: 20rem !important;
+    height: 19rem !important;
+} */
+
+.responsive-img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    margin-right: 6rem;
+  }
+
 

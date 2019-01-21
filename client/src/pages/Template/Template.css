@@ -2,7 +2,13 @@
     height: 20rem;
 }
 
-#tempPage {
+.card-img-top {
+    height: 18rem;
+    width: 14rem;
+}
+/* Double check! */
+/* TODO: Please Check this!! */
+/* #tempPage {
     height: 100vh;
 }
 
@@ -12,12 +18,4 @@
 
 img {
     height: 16rem;
-}
-
-h1 {
-    font-family: 'Major Mono Display', monospace;
-}
-
-#cardT {
-    font-family: 'Major Mono Display', monospace;
-}
+} */

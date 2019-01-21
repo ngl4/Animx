@@ -1,10 +1,18 @@
-.animx-login {
+.animx-login,
+.animx-logout {
     color: #D35400;
     font-family: 'Major Mono Display', monospace;
     
 }
 
-a:hover {
-    color: #D35400;
+a:hover,
+.animx-logout:hover {
+    color: rgb(215, 137, 85);
     text-decoration: none;
 }
+
+.nav-home-background {
+    background: transparent;
+}
+
+
