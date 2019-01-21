@@ -3,6 +3,7 @@ import "./Contact2.css";
 import Flip from 'react-reveal/Flip';
 import Fade from 'react-reveal/Fade';
 import Nav2 from "../Nav2";
+import Foot2 from "../Foot2";
 
 class Contact2 extends Component {
 
@@ -63,7 +64,9 @@ class Contact2 extends Component {
 
             
             </div>
+            <Foot2 />
             </Flip>
+
         );
     }
 }

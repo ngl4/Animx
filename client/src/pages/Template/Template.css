@@ -2,6 +2,14 @@
     height: 20rem;
 }
 
+#tempPage {
+    height: 100vh;
+}
+
+.jumbotron{
+    height: 100vh;
+}
+
 img {
     height: 16rem;
 }

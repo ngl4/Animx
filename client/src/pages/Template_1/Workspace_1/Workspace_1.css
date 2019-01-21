@@ -1,0 +1,25 @@
+.instructions {
+    font-family: "Major Mono Display";
+    margin-top: 10%;
+}
+
+.containerInstructions {
+
+    text-align: center;
+    font-family: "Montserrat-Light";
+    font-size: 1rem;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    line-height: 1.5rem;
+}
+
+ul {
+    list-style-type: none;
+  }
+
+  .containerIMG {
+      font-size: 2.5rem;
+      font-family: "Major Mono Display";
+      letter-spacing: 0.1em;
+  }

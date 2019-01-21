@@ -1,23 +1,24 @@
 .aboutArch {
     padding-right: 3%;
     padding-left: 3%;
-    padding-bottom: 3%;
     padding-top: 120px;
     border-radius: 40%;
     margin-top: 3%;
     width: 90%;
+
 }
 
  #cardArch {
     font-family: "Noto Serif", serif;
-    background-color:  #202121;
+    background-color:white;
+    color: #202121;
 
 
 }
 
 .card-body-basic {
-    background-color: #202121;
-    color: ghostwhite;
+    background-color: white;
+    color: #202121;
     text-align: center;
     padding: 5%; 
     width: 90%;
@@ -25,13 +26,53 @@
 }
 
 #circular {
-    color: ghostwhite;
-    background-color: #202121;
-    padding-left: 5%;
+    color: #202121;
+    padding-left: 12%;
     padding-right: 5%;
     padding-top: 2%;
-    border-radius: 60%;
-
+    border-radius: 50%;
+    margin-left: 20%;
 }
 
 
+
+#aboutIt {
+    background-color: white;
+    color:#202121;
+
+}
+
+#abtBtn {
+    font-size: 3rem;
+    margin-top: -20%;
+    margin-right: 5%;
+    border-style: none;
+    border-width: 0px;
+    -webkit-animation: bgcolor 20s infinite;
+    animation: bgcolor 10s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate
+
+}
+
+@keyframes bgcolor {
+    0% {
+        background-color:#23ba8b
+    }
+
+    30% {
+        background-color: #a5a9d9
+    }
+
+    60% {
+        background-color: #ba2352
+    }
+
+    90% {
+        background-color: #239eba;
+    }
+
+    100% {
+        background-color: #23ba40;
+    }
+}

@@ -9,9 +9,9 @@ import pic4 from "./images/four.jpg";
 import pic5 from "./images/five.jpg";
 import pic6 from "./images/six.jpg";
 import Zoom from 'react-reveal/Zoom';
+import Foot2 from "../Foot2";
 
-
-//const images = [pic1, pic2, pic3, pic4, pic5, pic6];
+ 
 const Portfolio2 = props => {
     return (
         <div className="gallery">
@@ -24,7 +24,7 @@ const Portfolio2 = props => {
             <div className="row">
 
                 <div className="col-sm-4">
-                    <img src={pic1} alt="1" class="pic"/>
+                    <img src={pic1} alt="1" className="image"/>
                     <h5 className="card-title">DESIGN 1</h5>
                     Amet nisl purus in mollis nunc. Dignissim suspendisse in est ante 
                     in nibh mauris cursus mattis. Dignissim suspendisse in est ante in 
@@ -72,7 +72,11 @@ const Portfolio2 = props => {
 
         </div>
     </Zoom>
+ <div className="foot">     <Foot2 /></div>
     </div>
+
+   
+
     )
 };
 
