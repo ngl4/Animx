@@ -9,6 +9,8 @@
     font-family: 'Noto Serif', serif;
 }
 
+button:focus {outline:0;}
+
 .menu {
     background-color: #202121;
     text-align: right;

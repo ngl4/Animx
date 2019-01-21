@@ -12,7 +12,7 @@ class Template extends Component {
     return (
       <div>
         <TemplateNav />
-        <div className="jumbotron mt-5 text-center">
+        <div className="jumbotron mt-5 text-center" id="tempPage">
           {/* This is The Template!!! */}
 
           <h1> Templates </h1>
@@ -20,7 +20,7 @@ class Template extends Component {
 
           <div className="container">
             <div className="row d-flex justify-content-around">
-              <div className="card card-size col-md-3 m-2">
+              <div className="card card-size col-md-3 m-3">
                 <a href="/template_1/workspace" alt="template_1">
                   <img
                     className="card-img-top"
@@ -35,7 +35,7 @@ class Template extends Component {
               </div>
 
           
-              <div className="card card-size col-md-3 m-2">
+              <div className="card card-size col-md-3 m-3">
               <a href="/template_2/workspace_2" alt="template_2">
                   <img
                     className="card-img-top"
@@ -43,7 +43,7 @@ class Template extends Component {
                     alt="Cardcap 1"
                   />
                 <div className="card-body">
-                  <p className="card-text">Template 2 | "Black + White"</p>
+                  <p className="card-text" id="cardT">Template 2 | "Black + White"</p>
                 </div>
                 </a>
               </div>

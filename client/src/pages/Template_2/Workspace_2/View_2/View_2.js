@@ -6,7 +6,8 @@ import Nav2 from "./Nav2";
 import Foot2 from "./Foot2";
 import Portfolio2 from "./Portfolio2";
 import Contact2 from "./Contact2";
-import Rotate from 'react-reveal/Rotate';
+import Fade from "react-reveal/Fade";
+import Text from "./Text";
 
 
 
@@ -23,7 +24,8 @@ class View_2 extends Component {
         />
 
         <div><Nav2 /></div>
-        <div><Rotate><Temp23D /></Rotate></div> 
+        <div><Fade Cascade top><Temp23D /></Fade></div> 
+        <div><Text /></div>
         <div className="foot2"><Foot2 /></div>
       </div>
     );
