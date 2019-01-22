@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Home.css";
 import HomeNav from "../../components/HomeNav";
-// import Footer from "../../components/Footer";
+import Footer from "../../components/Footer";
 import ThreeScene from "./background/ThreeScene";
 
 
@@ -32,7 +32,7 @@ class Home extends Component {
            </div>
 
           {/* Footer */}
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </div>
     );

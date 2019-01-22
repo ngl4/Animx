@@ -2,12 +2,12 @@
     background-color: #85929E;
 }
 
-.heading-background {
+/* .heading-background {
     background-image: url("./images/bg-triangle.jpg");
     height: 1200px;
     background-position-y: -20px;
     background-position-x: -100px;
-}
+} */
 
 .heading-title,
 .heading-lead {

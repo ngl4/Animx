@@ -15,14 +15,15 @@ class ThreeScene extends Component {
     this.renderer.setSize(width, height);
     this.mount.appendChild(this.renderer.domElement);
     //ADD CUBE
-    const geometry = new THREE.TorusKnotBufferGeometry(4, 0.5, 60, 60, 13, 10);
+    // const geometry = new THREE.TorusKnotBufferGeometry(4, 0.5, 60, 60, 13, 10);
+    const geometry = new THREE.SphereBufferGeometry(5, 8, 32, 0, 0.8, 2, 5.8);
     const material = new THREE.MeshStandardMaterial({ color: 0xee3333 });
     this.object = new THREE.Mesh(geometry, material);
     this.object.castShadow = true;
     this.scene.add(this.object);
 
     //ADD LIGHT
-    this.light = new THREE.SpotLight(0xffffff, 0.6);
+    this.light = new THREE.SpotLight(0xeeee33, 0.6);
     this.scene.add(this.light);
     this.light.position.set(3, 4, 15);
 
@@ -32,7 +33,7 @@ class ThreeScene extends Component {
     this.light.shadow.camera.near = 0.1;
     this.light.shadow.camera.far = 500;
 
-    this.light = new THREE.SpotLight(0xffffff, 0.4);
+    this.light = new THREE.SpotLight(0xeeee33, 0.4);
     this.scene.add(this.light);
     this.light.position.set(-5, 15, 5);
 
@@ -42,6 +43,10 @@ class ThreeScene extends Component {
     this.light.shadow.camera.near = 0.1;
     this.light.shadow.camera.far = 500;
 
+    this.light = new THREE.AmbientLight(0xffffff); // soft white light
+    this.scene.add(this.light);
+
+    //ADD PLANE GEOMETRY
     const planeGeometry = new THREE.PlaneBufferGeometry(500, 500, 32, 32);
     const planeMaterial = new THREE.MeshStandardMaterial({ color: 0xeeaa33 });
     const plane = new THREE.Mesh(planeGeometry, planeMaterial);
