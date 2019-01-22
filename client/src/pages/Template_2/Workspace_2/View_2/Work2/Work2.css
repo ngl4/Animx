@@ -23,3 +23,9 @@ img:hover {
 /* a:hover { 
     background-color: yellow;
   } */
+
+  .image-work-responsive {
+    width: 100%;
+    max-width: 270px;
+    height: auto;
+  }

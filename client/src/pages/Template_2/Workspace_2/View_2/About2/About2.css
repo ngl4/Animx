@@ -1,12 +1,15 @@
 .aboutArch {
-    padding-right: 3%;
+    /* padding-right: 3%;
     padding-left: 3%;
-    padding-top: 120px;
+    padding-top: 120px; */
     border-radius: 40%;
     margin-top: 3%;
-    width: 90%;
-
+    width: 100%;
+    /* margin-left: 5%;
+    margin-right: 5%; */
+    min-height: calc(77vh - 89px);
 }
+
 
  #cardArch {
     font-family: "Noto Serif", serif;
@@ -21,7 +24,7 @@
     color: #202121;
     text-align: center;
     padding: 5%; 
-    width: 90%;
+    width: 100%;
 
 }
 
@@ -53,6 +56,19 @@
     -webkit-animation-direction: alternate;
     animation-direction: alternate
 
+}
+
+.responsive-img-about2 {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin-right: 0rem;
+}
+.responsive-sampleimg-about2 {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    margin-right: 0rem;
 }
 
 @keyframes bgcolor {

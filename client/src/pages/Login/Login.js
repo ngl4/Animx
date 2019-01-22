@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import "./Login.css";
 import Footer from "../../components/Footer";
+import LoginNav from "../../components/LoginNav";
 import axios from "axios";
+import ThreeScene from "./ThreeScene";
 
 class Login extends Component {
   state = {
@@ -85,48 +87,62 @@ class Login extends Component {
   render() {
     return (
       <div>
-        <div className="wrapper">
+        <LoginNav />
+        <div className="wrapper mt-5 ">
           {/* Login */}
-          <div className="jumbotron jumbotron-fluid text-center">
-            This is login page
+          <div className="jumbotron jumbotron-fluid wrapper-login mb-0">
+          <br /><br /><br /><br />
             <div className="container">
-              {/* Logging out error message */}
-              <p className="text-danger">
-                {this.state.err ? this.state.err : ""}
-              </p>
-              <form>
-                <div class="form-group">
-                  <label for="exampleInputUsername">Username</label>
-                  <input
-                    type="Username"
-                    class="form-control"
-                    name="username"
-                    value={this.state.username}
-                    onChange={this.handleInputChange}
-                    id="exampleInputUsername"
-                    aria-describedby="UsernameHelp"
-                    placeholder="Username"
-                  />
+              <div className="row">
+              <div className="col-md-6">
+                {/* Logging out error message */}
+                <p className="text-danger">
+                  {this.state.err ? this.state.err : ""}
+                </p>
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputUsername" className="heading-title">usernamE</label>
+                    <input
+                      type="Username"
+                      class="form-control"
+                      name="username"
+                      value={this.state.username}
+                      onChange={this.handleInputChange}
+                      id="exampleInputUsername"
+                      aria-describedby="UsernameHelp"
+                      // placeholder="Username"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1" className="heading-title">passworD</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      name="password"
+                      value={this.state.password}
+                      onChange={this.handleInputChange}
+                      id="exampleInputPassword1"
+                      // placeholder="Password"
+                    />
+                  </div>
+                </form>
+                {this.state.loggedIn ? (
+                  ""
+                ) : (
+                  // <button onClick={this.handlelogout}> Logout Here </button>
+                  <button
+                    onClick={this.handlelogin}
+                    className="text-secondary pl-2 pr-2 login-font login-noborder login-btn"
+                  >
+                    {" "}
+                    <span className="heading-title">Sign In</span>{" "}
+                  </button>
+                )}
                 </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input
-                    type="password"
-                    class="form-control"
-                    name="password"
-                    value={this.state.password}
-                    onChange={this.handleInputChange}
-                    id="exampleInputPassword1"
-                    placeholder="Password"
-                  />
+                <div className="ml-5">
+                  <ThreeScene />
                 </div>
-              </form>
-              {this.state.loggedIn ? (
-                ""
-              ) : (
-                // <button onClick={this.handlelogout}> Logout Here </button>
-                <button onClick={this.handlelogin} className="bg-warning text-secondary pl-2 pr-2"> Sign In </button>
-              )}
+              </div>
             </div>
           </div>
 

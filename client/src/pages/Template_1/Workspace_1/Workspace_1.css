@@ -7,11 +7,15 @@
 
     text-align: center;
     font-family: "Montserrat-Light";
-    font-size: 1rem;
     margin-top: 5%;
     margin-left: 20%;
     margin-right: 20%;
     line-height: 1.5rem;
+}
+
+.step-font {
+    font-size: 1.3em;
+    color: #D35400;
 }
 
 ul {
@@ -23,3 +27,9 @@ ul {
       font-family: "Major Mono Display";
       letter-spacing: 0.1em;
   }
+
+.step-img {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+}
