@@ -1,5 +1,11 @@
 # Create React Express App
 
+Please use this authentication login (temporarily): 
+username: admin
+password: 12345
+
+Here is the deployed application: https://animx.herokuapp.com/
+
 ## About This Boilerplate
 
 This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
