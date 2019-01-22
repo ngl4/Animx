@@ -27,23 +27,23 @@ class Workspace_2 extends Component {
           <ul>
               <li className="step-font">1. Select "content" to insert information: </li>
               <br />
-              <img src={Step1} />
+              <img src={Step1} alt="step1"/>
               <br /><br /><br />
               <li className="step-font">2. You will see a page similar to this: </li>
               <br />
-              <img src={Step2} className="step-img"/>
+              <img src={Step2} className="step-img"alt="step2"/>
               <br /><br /><br />
               <li className="step-font">3. Insert Information, see example below: </li>
               <br />
-              <img src={Step3} className="step-img"/>
+              <img src={Step3} className="step-img" alt="step3"/>
               <br /><br /><br />
               <li className="step-font">4. Click on view to preview the page: </li>
               <br />
-              <img src={Step1} />
+              <img src={Step1} alt="step4"/>
               <br /><br /><br />
               <li className="step-font">5. Here is an example of how it will look:</li>
               <br />
-              <img src={Step4} className="step-img"/>
+              <img src={Step4} className="step-img" alt="step5"/>
               <br /><br /><br />
             </ul>
             </Zoom>
