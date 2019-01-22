@@ -3,6 +3,7 @@ import "./Login.css";
 import Footer from "../../components/Footer";
 import LoginNav from "../../components/LoginNav";
 import axios from "axios";
+import ThreeScene from "./ThreeScene";
 
 class Login extends Component {
   state = {
@@ -137,6 +138,9 @@ class Login extends Component {
                     <span className="heading-title">Sign In</span>{" "}
                   </button>
                 )}
+                </div>
+                <div className="ml-5">
+                  <ThreeScene />
                 </div>
               </div>
             </div>
