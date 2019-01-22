@@ -5,6 +5,7 @@ import Nav2 from "../Nav2";
 import Foot2 from "../Foot2";
 import Roll from "react-reveal/Roll";
 import axios from "axios";
+import Nav from "../../../../../components/Nav";
 
 class About2 extends Component {
   state = {
@@ -64,13 +65,17 @@ class About2 extends Component {
     return (
       <Fade Cascade>
         <div className="wrapper-temp2">
+        <Nav
+          contentUrl="/template_2/workspace_2/content_2"
+          viewUrl="/template_2/workspace_2/view_2"
+        />
           <Nav2 />
           <div className="aboutArch container">
             <div className="abtArch d-flex flex-column justify-content-center">
               <div className="card" id="cardArch">
                 <div className="card-body-basic">
                   {this.state.imageUrl ? (
-                    <div className="mr-3">
+                    <div className="">
                       <img
                         src={this.state.imageUrl}
                         className="responsive-img-about2"
@@ -78,10 +83,10 @@ class About2 extends Component {
                       />
                     </div>
                   ) : (
-                    <div className="text-center ml-5 pl-5">
+                    <div className="text-center">
                       <img
-                        src="https://s3.us-east-2.amazonaws.com/animxproject/architecture-1850129_640.jpg"
-                        className="responsive-img-about2"
+                        src="https://s3.us-east-2.amazonaws.com/animxproject/manhattan-336708_640.jpg"
+                        className="responsive-sampleimg-about2"
                         alt="not available"
                       />
                     </div>
@@ -95,9 +100,7 @@ class About2 extends Component {
                     >
                       {this.state.show
                         ? ""
-                        : this.state.about_title
-                        ? this.state.about_title
-                        : "ABOUT "}
+                        : this.state.about_title}
                     </button>
 
                     <div className="rollIt">

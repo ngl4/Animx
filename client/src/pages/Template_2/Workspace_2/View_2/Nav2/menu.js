@@ -23,7 +23,7 @@ class Menu extends Component {
               </div>
 
               <div class="col-sm-3">
-                <a href="/template_2/workspace_2/view_2/portfolio_2" class="linksList">
+                <a href="/template_2/workspace_2/view_2/work_2" class="linksList">
                   <h5 class="navtwo">WORKS</h5>
                 </a>
               </div>

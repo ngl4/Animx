@@ -12,7 +12,7 @@ import Template_2 from "./pages/Template_2/Workspace_2";
 import Content_2 from "./pages/Template_2/Workspace_2/Content_2";
 import View_2 from "./pages/Template_2/Workspace_2/View_2";
 import About2 from "./pages/Template_2/Workspace_2/View_2/About2";
-import Portfolio2 from "./pages/Template_2/Workspace_2/View_2/Portfolio2";
+import Work2 from "./pages/Template_2/Workspace_2/View_2/Work2";
 import Contact2 from "./pages/Template_2/Workspace_2/View_2/Contact2";
 
 
@@ -30,7 +30,7 @@ const App = () => (
         <Route exact path="/template_2/workspace_2/content_2" component={Content_2} />
         <Route exact path="/template_2/workspace_2/view_2" component={View_2} />
         <Route exact path="/template_2/workspace_2/view_2/about_2" component={About2} />
-        <Route exact path="/template_2/workspace_2/view_2/portfolio_2" component={Portfolio2} />
+        <Route exact path="/template_2/workspace_2/view_2/work_2" component={Work2} />
         <Route exact path="/template_2/workspace_2/view_2/contact_2" component={Contact2} />
 
         <Route component={NoMatch} />

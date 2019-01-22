@@ -59,10 +59,16 @@
 }
 
 .responsive-img-about2 {
-    width: 90%;
-    max-width: 300px;
+    width: 100%;
+    max-width: 350px;
     height: auto;
-    margin-right: 6rem;
+    margin-right: 0rem;
+}
+.responsive-sampleimg-about2 {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    margin-right: 0rem;
 }
 
 @keyframes bgcolor {

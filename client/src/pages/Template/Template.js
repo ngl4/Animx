@@ -12,7 +12,7 @@ class Template extends Component {
     return (
       <div>
         <TemplateNav />
-        <div className="jumbotron mt-5 text-center" id="tempPage">
+        <div className="jumbotron mt-5 text-center mb-0 template-page-size" id="tempPage">
           {/* This is The Template!!! */}
 
           <h1> Templates </h1>

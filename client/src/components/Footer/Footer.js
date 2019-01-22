@@ -1,9 +1,10 @@
 import React from "react";
+import "./Footer.css";
 
 const Footer = () => (
-  <footer className="container-fluid text-white p-3 bg-secondary">
+  <footer className="container-fluid text-white p-3 nav-background">
     <div className="container">
-      <p>Copyright 2018 Animx</p>
+      <p className="animx-color">Copyright 2018 Animx</p>
     </div>
   </footer>
 );

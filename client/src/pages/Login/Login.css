@@ -1,2 +1,17 @@
+.wrapper-login {
+    min-height: 87vh;
+}
 
+.login-font {
+    font-family: 'Major Mono Display', monospace;
 
+}
+
+.login-noborder {
+    border: 0.5px solid lightgray;
+}
+
+.login-btn:hover {
+    background-color: #F5CBA7;
+
+}
