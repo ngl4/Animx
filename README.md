@@ -2,7 +2,8 @@
 
 A website builder application with 3D animating models and elements for users with little or no coding experience. Built with React, Node.js, Express, MongoDB, Amazon S3, Passport.js, Three.js. 
 
-Please use this authentication login temporarily, because this application is still under development: 
+_Please use this authentication login temporarily, because this application is still under development._
+
 username: admin
 password: 12345
 
