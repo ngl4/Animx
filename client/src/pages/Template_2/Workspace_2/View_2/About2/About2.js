@@ -99,8 +99,8 @@ class About2 extends Component {
                       onClick={this.handleClick}
                     >
                       {this.state.show
-                        ? ""
-                        : this.state.about_title}
+                        ? this.state.about_title
+                        : (this.state.about_title ? this.state.about_title: "About")}
                     </button>
 
                     <div className="rollIt">
