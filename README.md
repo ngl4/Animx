@@ -4,8 +4,8 @@ A website builder application with 3D animating models and elements for users wi
 
 _Please use this authentication login temporarily, because this application is still under development._
 
-username: admin
-password: 12345
+* username: admin
+* password: 12345
 
 Here is the deployed application: https://animx.herokuapp.com/
 
