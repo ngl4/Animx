@@ -18,7 +18,6 @@ class ThreeScene extends Component {
     this.scene = new THREE.Scene();
     //this.scene.background = new THREE.Color(0x3a3e42);
     this.scene.fog = new THREE.FogExp2(0xaaccff, 0.0007);
-
     //ADD CAMERA
     this.camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
     this.camera.position.z = 15;

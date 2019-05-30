@@ -70,8 +70,6 @@ app.get("/user_data", function(req, res) {
 });
 
 
-
-
 //Image Upload: Amazon Post route
 app.post("/api/uploadImage", function(req, res) {
   //console.log(req.files);
@@ -91,8 +89,7 @@ app.post("/api/uploadImage", function(req, res) {
           console.log(err);
         }
       });
-    });
-  
+    }); 
     file.section = req.query.section; // (optional for populate reason to add -->) + "_title"; 
     file.headers = "image";
     //console.log(file);

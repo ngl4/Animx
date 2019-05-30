@@ -399,6 +399,7 @@ class PortfolioContent extends Component {
         .catch(err => console.log(err));
     }
     if (this.state.portfolio3_title) {
+      console.log(this.state.portfolio3_title);
       axios({
         method: "post",
         url: "/api/saveText/" + type,
